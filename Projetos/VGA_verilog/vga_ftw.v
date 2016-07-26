@@ -1,8 +1,9 @@
 
-module VGA (clk_50, reset, red, green, blue, r, g, b, hsync, vsync, ledvideoon);
+module VGA (clk_50, reset, red, green, blue, r, g, b, hsync, vsync, ledvideoon, resetPLL);
 
 input clk_50, reset;
 input [7:0] red, green, blue;
+input resetPLL;
 
 output reg hsync, vsync;
 output reg [7:0] r, g, b;
@@ -17,25 +18,18 @@ wire videoon;
 reg videov, videoh;
 reg [9:0] hcount, vcount;
 
-reg [1:0] count;
 reg clk;
 
 // PELELE
 always @(posedge clk_50)
 begin
-	if (reset)
+	if (resetPLL)
 	begin
-		count <= 0;
 		clk <= 0;
 	end
 	else
-	begin
-		count <= count + 1;
-		if (count == 2)
-		begin
-			count <= 0;
-			clk = ~clk;
-		end
+	begin		
+		clk = ~clk;
 	end
 
 end
@@ -106,17 +100,17 @@ always @(posedge clk)
 begin
 	if (reset)
 	begin
-		hsync <= 1'b0;
-		vsync <= 1'b0;
+		hsync <= 1'b1;
+		vsync <= 1'b1;
 	end
 	else
 	begin
-		if ((hcount <= 749) && (hcount >= 654))
+		if ((hcount <= 755) && (hcount >= 659))
 			hsync <= 1'b0;
 		else
 			hsync <= 1'b1;
 		
-		if ((vcount <= 491) && (vcount >= 489))
+		if ((vcount <= 494) && (vcount >= 493))
 			vsync <= 1'b0;
 		else
 			vsync <= 1'b1;
