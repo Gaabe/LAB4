@@ -1,5 +1,5 @@
 
-module VGA (clk_50, reset, red, green, blue, r, g, b, hsync, vsync, ledvideoon, resetPLL);
+module VGA (clk_50, reset, red, green, blue, r, g, b, hsync, vsync, ledvideoon, resetPLL, clkPLL);
 
 input clk_50, reset;
 input [7:0] red, green, blue;
@@ -7,6 +7,7 @@ input resetPLL;
 
 output reg hsync, vsync;
 output reg [7:0] r, g, b;
+output clkPLL;
 
 output ledvideoon;
 
@@ -19,6 +20,8 @@ reg videov, videoh;
 reg [9:0] hcount, vcount;
 
 reg clk;
+
+assign clkPLL = clk;
 
 // PELELE
 always @(posedge clk_50)
@@ -148,3 +151,4 @@ begin
 	end
 end
 endmodule
+
