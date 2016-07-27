@@ -1,15 +1,11 @@
 
-module VGA (clk_50, reset, red, green, blue, r, g, b, hsync, vsync, ledvideoon, resetPLL, clkPLL);
+module PixelLogic (clk, reset, red, green, blue, r, g, b, hsync, vsync);
 
-input clk_50, reset;
+input clk, reset;
 input [7:0] red, green, blue;
-input resetPLL;
 
 output reg hsync, vsync;
 output reg [7:0] r, g, b;
-output clkPLL;
-
-output ledvideoon;
 
 reg [8:0] row;
 reg [9:0] column;
@@ -18,24 +14,6 @@ wire videoon;
 
 reg videov, videoh;
 reg [9:0] hcount, vcount;
-
-reg clk;
-
-assign clkPLL = clk;
-
-// PELELE
-always @(posedge clk_50)
-begin
-	if (resetPLL)
-	begin
-		clk <= 0;
-	end
-	else
-	begin		
-		clk = ~clk;
-	end
-
-end
 
 // hcounter
 
@@ -121,7 +99,6 @@ begin
 end
 
 assign videoon = videoh && videov;
-assign ledvideoon = videoon;
 
 // colors
 
