@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at VGA_pll.v(9): always construct contains both blocking and non-blocking assignments File: C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pll.v Line: 9

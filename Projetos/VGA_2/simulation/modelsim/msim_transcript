@@ -1,0 +1,535 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do VGA_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top_inst.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:00 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top_inst.v 
+# -- Compiling module symbol_top_inst
+# 
+# Top level modules:
+# 	symbol_top_inst
+# End time: 11:41:01 on Aug 03,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:01 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top.v 
+# -- Compiling module symbol_top2
+# 
+# Top level modules:
+# 	symbol_top2
+# End time: 11:41:01 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pixelLogic.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:01 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pixelLogic.v 
+# -- Compiling module PixelLogic
+# 
+# Top level modules:
+# 	PixelLogic
+# End time: 11:41:01 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_fifo.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:01 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_fifo.v 
+# -- Compiling module FIFO
+# 
+# Top level modules:
+# 	FIFO
+# End time: 11:41:01 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:02 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_controller.v 
+# -- Compiling module FIFO_reader
+# 
+# Top level modules:
+# 	FIFO_reader
+# End time: 11:41:02 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/pll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:02 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 11:41:02 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/resetLogic.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:02 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/resetLogic.v 
+# -- Compiling module resetLogic
+# 
+# Top level modules:
+# 	resetLogic
+# End time: 11:41:02 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2 {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/sdram_sim.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:02 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/sdram_sim.v 
+# -- Compiling module sdram_simulator
+# 
+# Top level modules:
+# 	sdram_simulator
+# End time: 11:41:02 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/VGA_2/db {C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:03 on Aug 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db" C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 11:41:03 on Aug 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlib altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "altera_mf_ver".
+# 
+vmap altera_mf_ver altera_mf_ver
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap altera_mf_ver altera_mf_ver 
+# Modifying modelsim.ini
+vlog -work altera_mf_ver C:/altera_lite/16.0/quartus/eda/sim_lib/altera_mf.v
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:41:11 on Aug 03,2016
+# vlog -reportprogress 300 -work altera_mf_ver C:/altera_lite/16.0/quartus/eda/sim_lib/altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altera_syncram_derived_forwarding_logic
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module alt_fault_injection
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	alt_fault_injection
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 11:41:12 on Aug 03,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -L altera_mf_ver work.symbol_top_inst
+# vsim -L altera_mf_ver work.symbol_top_inst 
+# Start time: 11:41:12 on Aug 03,2016
+# Loading work.symbol_top_inst
+# Loading work.symbol_top2
+# Loading work.FIFO
+# Loading work.FIFO_reader
+# Loading work.PixelLogic
+# Loading work.resetLogic
+# Loading work.sdram_simulator
+# Loading work.pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+add wave -position end  sim:/symbol_top_inst/CLOCK_50
+add wave -position end  sim:/symbol_top_inst/KEY0
+add wave -position end  sim:/symbol_top_inst/VGA_HS
+add wave -position end  sim:/symbol_top_inst/VGA_VS
+add wave -position end  sim:/symbol_top_inst/column
+add wave -position end  sim:/symbol_top_inst/row
+add wave -position end  sim:/symbol_top_inst/VGA_B
+add wave -position end  sim:/symbol_top_inst/VGA_G
+add wave -position end  sim:/symbol_top_inst/VGA_R
+force -freeze sim:/symbol_top_inst/CLOCK_50 1 0, 0 {50 ps} -r 100
+force -freeze sim:/symbol_top_inst/KEY0 0 0
+run
+force -freeze sim:/symbol_top_inst/KEY0 1 0
+run
+#  Note : Cyclone IV E PLL was reset
+# Time: 100  Instance: symbol_top_inst.u0.b2v_pelele.altpll_component.cycloneiii_pll.pll3
+force -freeze sim:/symbol_top_inst/KEY0 0 0
+run
+run
+run
+run
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 600  Instance: symbol_top_inst.u0.b2v_pelele.altpll_component.cycloneiii_pll.pll3
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 11:52:05 on Aug 03,2016, Elapsed time: 0:10:53
+# Errors: 0, Warnings: 0
