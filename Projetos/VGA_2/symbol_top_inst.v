@@ -30,7 +30,10 @@ module symbol_top_inst
 	row,
 	VGA_B,
 	VGA_G,
-	VGA_R
+	VGA_R,
+	VGA_SYNC_N,
+	VGA_BLANK_N,
+	LEDR
 );
 
 //input wire	wr_en;
@@ -45,10 +48,16 @@ output wire	[8:0] row;
 output wire	[7:0] VGA_B;
 output wire	[7:0] VGA_G;
 output wire	[7:0] VGA_R;
+output wire [17:0] LEDR;
+
+output wire VGA_SYNC_N, VGA_BLANK_N;
+
+assign VGA_SYNC_N = 1'b1;
+assign VGA_BLANK_N = 1'b1;
 
 symbol_top2 u0(	// input [0:0] KEY_sig
 //	.data_in(data_in) ,	// input [31:0] data_in_sig
-	.KEY(KEY[0]) ,
+	.KEY(KEY[1:0]) ,
 //	.wr_en(wr_en) ,	// input  wr_en_sig
 	.CLOCK_50(CLOCK_50) ,	// input  CLOCK_50_sig
 	.row(row) ,	// output [8:0] row_sig
@@ -57,8 +66,9 @@ symbol_top2 u0(	// input [0:0] KEY_sig
 	.VGA_G(VGA_G) ,	// output [7:0] VGA_G_sig
 	.VGA_B(VGA_B) ,	// output [7:0] VGA_B_sig
 	.VGA_HS(VGA_HS) ,	// output  VGA_HS_sig
-	.VGA_VS(VGA_VS) 	// output  VGA_VS_sig
+	.VGA_VS(VGA_VS) ,	// output  VGA_VS_sig
 //	.freeslots(freeslots) 	// output [3:0] freeslots_sig
+	.LEDR(LEDR)
 	);
 
 endmodule

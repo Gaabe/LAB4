@@ -1,4 +1,4 @@
-module PixelLogic (clk, reset, red, green, blue, r, g, b, hsync, vsync, row, column, videoon);
+module PixelLogic (clk, reset, red, green, blue, r, g, b, hsync, vsync, row, column, vga_enabled);
 
 input clk, reset;
 input [7:0] red, green, blue;
@@ -9,10 +9,31 @@ output reg [7:0] r, g, b;
 output reg [8:0] row;
 output reg [9:0] column;
 
-output videoon;
+output reg vga_enabled;
+
+reg videoon;
 
 reg videov, videoh;
 reg [9:0] hcount, vcount;
+
+// vga_enabled
+always @(posedge clk)
+begin
+	if (reset)
+	begin
+		vga_enabled <= 1'b0;
+	end
+	else
+	begin
+		if ((reset != 1) && (videoon))
+			vga_enabled <= 1'b1;
+		else
+			vga_enabled <= 1'b0;
+	end
+
+
+end
+
 
 // hcounter
 
@@ -25,7 +46,7 @@ begin
 		if (hcount == 799)
 			hcount <= 0;
 		else
-			hcount <= hcount + 1;
+			hcount <= hcount + 10'd1;
 	end
 end
 
@@ -55,7 +76,7 @@ begin
 			if (vcount == 524)
 				vcount <= 0;
 			else
-				vcount <= vcount + 1;
+				vcount <= vcount + 10'd1;
 	end
 end
 
@@ -97,7 +118,10 @@ begin
 	end
 end
 
-assign videoon = videoh && videov;
+always @(*)
+begin
+	videoon <= videoh && videov;
+end
 
 // colors
 

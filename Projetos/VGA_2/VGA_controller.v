@@ -5,6 +5,7 @@ input [23:0] data_pixel;
 output reg rd_en, rstVGA;
 output [7:0] red, green, blue;
 
+reg vga_started;
 
 // Lógica de RD_EN
 reg [1:0] counter0;
@@ -17,8 +18,8 @@ begin
 	end
 	else
 	begin
-		counter0 <= counter0 + 1;
-		if ((counter0 == 3) && videoon)
+		counter0 <= counter0 + 2'd1;
+		if ((counter0 == 2) && vga_started)
 		begin
 			rd_en <= 1;
 		end
@@ -31,17 +32,23 @@ end
 
 
 // Lógica de rstVGA
-reg [2:0] counter1;
-always @(posedge clk100)
+reg [3:0] counter1;
+always @(posedge clk25)
 begin
 	if (rst)
+	begin
 		counter1 <= 0;
+		rstVGA <= 0;
+		vga_started <= 0;
+	end
 	else
 	begin
-		if ((counter1 <= 3)&&(empty == 0))
+//		if ((counter1 <= 3)&&(empty == 0))
+		if (counter1 == 0)
 		begin
-			counter1 <= counter1 + 1;
+			counter1 <= 1;
 			rstVGA <= 1;
+			vga_started <= 1;
 		end
 		else
 			rstVGA <= 0;
