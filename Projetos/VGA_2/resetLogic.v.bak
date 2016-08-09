@@ -1,0 +1,3 @@
+module resetLogic(clkin, locked, rstSignal);
+
+endmodule

@@ -1,0 +1,203 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/simulation/modelsim
+vFIFO
+Z1 !s110 1470235261
+!i10b 1
+!s100 k:Y9@?`BCVceUG[I<A]G]2
+If7RNhiIIcRF^IRin?GzJ@0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1470165637
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_fifo.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_fifo.v
+L0 1
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1470235261.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_fifo.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2}
+n@f@i@f@o
+vFIFO_reader
+Z7 !s110 1470235262
+!i10b 1
+!s100 zm5k=I6Be[>VS=TF?M6;g0
+I@]RLgYoGK8d5aP;O:JP=T2
+R2
+R0
+w1470168495
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_controller.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1470235262.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_controller.v|
+!i113 1
+R5
+R6
+n@f@i@f@o_reader
+vPixelLogic
+R1
+!i10b 1
+!s100 EVb?0[C]8Vl]:HIVaT]Pz0
+IoYdL@:Xc<bJ?HA4Gz<m@X0
+R2
+R0
+w1470161882
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pixelLogic.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pixelLogic.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pixelLogic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/VGA_pixelLogic.v|
+!i113 1
+R5
+R6
+n@pixel@logic
+vpll
+R7
+!i10b 1
+!s100 cmNiiE9;c04D_1=ZokUC80
+I7ZGg7bm`GQPLIA^28gX900
+R2
+R0
+w1470152321
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/pll.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/pll.v
+L0 40
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/pll.v|
+!i113 1
+R5
+R6
+vpll_altpll
+!s110 1470235263
+!i10b 1
+!s100 de7iS0g9V?0AjK5g]2>U03
+I=`Kiac2bHHjDIhDFgJ:T02
+R2
+R0
+w1470169103
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db/pll_altpll.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db/pll_altpll.v
+L0 31
+R3
+r1
+!s85 0
+31
+!s108 1470235263.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work {+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/db}
+vresetLogic
+R7
+!i10b 1
+!s100 gDeYnO;e33k[l79f;1Xg[0
+IzWXR_[k[GfU?U?Z4U88761
+R2
+R0
+w1470190877
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/resetLogic.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/resetLogic.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/resetLogic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/resetLogic.v|
+!i113 1
+R5
+R6
+nreset@logic
+vsdram_simulator
+R7
+!i10b 1
+!s100 e3lBXV4S;NBBNaD`kWb]o3
+IXF]ANbzEe5;og=TE5caS61
+R2
+R0
+w1470234536
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/sdram_sim.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/sdram_sim.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/sdram_sim.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/sdram_sim.v|
+!i113 1
+R5
+R6
+vsymbol_top2
+R1
+!i10b 1
+!s100 7;AWOO:J;Lj=KPBckDNAb3
+IZSTDeKB>YTBiK@nK1GCk81
+R2
+R0
+w1470234998
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top.v
+Z9 L0 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top.v|
+!i113 1
+R5
+R6
+vsymbol_top_inst
+R1
+!i10b 1
+!s100 ge5cLXzP:N_TWdCKz9MUM2
+IdhkeZSKW5P9_Z8hMEAIYj0
+R2
+R0
+w1470235241
+8C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top_inst.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top_inst.v
+R9
+R3
+r1
+!s85 0
+31
+!s108 1470235260.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top_inst.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2|C:/Users/Rafael Ferrari/Documents/Quartus/VGA_2/symbol_top_inst.v|
+!i113 1
+R5
+R6
