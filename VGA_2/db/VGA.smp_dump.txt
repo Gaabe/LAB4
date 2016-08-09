@@ -1,0 +1,5 @@
+
+State Machine - |symbol_top_inst|symbol_top2:u0|FIFO_reader:b2v_controller|counter1
+Name counter1.0001 
+counter1.0000 0 
+counter1.0001 1 

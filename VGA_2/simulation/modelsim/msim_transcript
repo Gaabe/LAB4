@@ -1,0 +1,45 @@
+# do VGA_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Modifying /home/aluno/altera_lite/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/aluno/rafael/VGA_2 {/home/aluno/rafael/VGA_2/symbol_top_inst.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:55:39 on Aug 05,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aluno/rafael/VGA_2" /home/aluno/rafael/VGA_2/symbol_top_inst.v 
+# -- Compiling module symbol_top_inst
+# 
+# Top level modules:
+# 	symbol_top_inst
+# End time: 11:55:40 on Aug 05,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/aluno/rafael/VGA_2 {/home/aluno/rafael/VGA_2/symbol_top.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 11:55:40 on Aug 05,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/aluno/rafael/VGA_2" /home/aluno/rafael/VGA_2/symbol_top.v 
+# -- Compiling module symbol_top2
+# ** Error: /home/aluno/rafael/VGA_2/symbol_top.v(47): (vlog-2730) Undefined variable: 'clk25_sig'.
+# ** Error (suppressible): /home/aluno/rafael/VGA_2/symbol_top.v(54): (vlog-2388) 'clk25_sig' already declared in this scope (symbol_top2).
+# End time: 11:55:40 on Aug 05,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /home/aluno/altera_lite/16.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./VGA_run_msim_rtl_verilog.do line 9
+# /home/aluno/altera_lite/16.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/aluno/rafael/VGA_2 {/home/aluno/rafael/VGA_2/symbol_top.v}"
+vsim work.symbol_top_inst
+# vsim work.symbol_top_inst 
+# Start time: 11:55:43 on Aug 05,2016
+# Loading work.symbol_top_inst
+# ** Error: (vsim-3033) /home/aluno/rafael/VGA_2/symbol_top_inst.v(59): Instantiation of 'symbol_top2' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /symbol_top_inst File: /home/aluno/rafael/VGA_2/symbol_top_inst.v
+#         Searched libraries:
+#             /home/aluno/rafael/VGA_2/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 11:55:43 on Aug 05,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

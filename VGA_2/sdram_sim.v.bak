@@ -1,0 +1,7 @@
+module sdram_simulator(clkin, rst, freeslots, wr_en, data_out);
+
+input clkin, rst;
+input [3:0] freeslots;
+output wr_
+
+endmodule

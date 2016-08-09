@@ -1,0 +1,39 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	0x7fbedad61171: ccl_err + 0x8171 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0xb1)
+	0x7fbedad63ff5: ccl_err + 0xaff5 (_Z14err_terminatorv + 0x4b)
+	0x7fbed69f6796: stdc++.so.6 + 0x63796 (_ZN10__cxxabiv111__terminateEPFvvE + 0x6)
+	0x7fbed69f67c3: stdc++.so.6 + 0x637c3
+	0x7fbed69f69ee: stdc++.so.6 + 0x639ee
+	0x7fbed6a475e7: stdc++.so.6 + 0xb45e7 (_ZSt19__throw_logic_errorPKc + 0x67)
+	0x7fbeda667e59: boost_regex.so.1.59.0 + 0x3ce59
+	0x7fbed6a53098: stdc++.so.6 + 0xc0098 (_ZNSsC2EPKcRKSaIcE + 0x38)
+	0x7fbee67307f3: db_acf + 0x11b7f3 (_ZN24ACF_MANAGER_STORAGE_REAL18post_error_messageEN20ACF_REVISION_MANAGER12ERROR_STATUSEPKciP24ACF_MGR_INPUT_PARAMETERSS3_S3_b + 0xc83)
+	0x7fbee6739667: db_acf + 0x124667 (_ZN24ACF_MANAGER_STORAGE_REAL19evaluate_tcl_scriptEPKcNS_16ACF_MGR_TCL_MODEEP24ACF_MGR_INPUT_PARAMETERS + 0x2d7)
+	0x7fbee673e2a0: db_acf + 0x1292a0 (_ZN24ACF_MANAGER_STORAGE_REAL31process_assignment_dependenciesER14ACF_ASSIGNMENTR24ACF_MGR_INPUT_PARAMETERSb + 0x100)
+	0x7fbee673ee33: db_acf + 0x129e33 (_ZN24ACF_MANAGER_STORAGE_REAL14set_assignmentEP24ACF_MGR_INPUT_PARAMETERSbbbbPSt4listIP14ACF_ASSIGNMENTSaIS4_EEbbbb + 0x373)
+	0x7fbee673a5f0: db_acf + 0x1255f0 (_ZN24ACF_MANAGER_STORAGE_REAL44internal_read_modern_settings_file_from_diskEPKcbR21ACF_READ_FILE_OPTIONS + 0xb50)
+	0x7fbee673a988: db_acf + 0x125988 (_ZN24ACF_MANAGER_STORAGE_REAL28internal_read_file_from_diskEPKcbR21ACF_READ_FILE_OPTIONS + 0x118)
+	0x7fbee673abcb: db_acf + 0x125bcb (_ZN24ACF_MANAGER_STORAGE_REAL19read_file_from_diskEPKcbR21ACF_READ_FILE_OPTIONS + 0x7b)
+	0x7fbee673dc86: db_acf + 0x128c86 (_ZN24ACF_MANAGER_STORAGE_REAL11synchronizeEb + 0x406)
+	0x7fbee67159c2: db_acf + 0x1009c2 (_ZN20ACF_REVISION_MANAGER11synchronizeEv + 0x22)
+	0x7fbee6729214: db_acf + 0x114214 (_ZN24ACF_MANAGER_STORAGE_REAL10write_lockEb + 0x74)
+	0x7fbee671b33f: db_acf + 0x10633f (_ZN11ACF_MANAGER28internal_open_create_projectERKSsS1_S1_bbbbbb + 0x41f)
+	0x7fbee671f894: db_acf + 0x10a894 (_ZN11ACF_MANAGER12open_projectERKSsS1_S1_bbbbb + 0x7c4)
+	0x7fbf10fce3a1: mega_wizmancmd_sh + 0x1d3a1 (_Z40wizman_global_get_selected_device_familyb + 0x139)
+	0x7fbf110459b4: mega_wizmancmd_sh + 0x949b4 (_ZN23WIZMAN_CNX_FILE_MANAGER28add_license_info_to_cnx_fileERKSsS1_ + 0x346)
+	0x7fbf11046b99: mega_wizmancmd_sh + 0x95b99 (_ZN23WIZMAN_CNX_FILE_MANAGER37append_any_requested_info_to_cnx_fileERKSsS1_ + 0x21)
+	0x7fbf1105bd0d: mega_wizmancmd_sh + 0xaad0d (_ZN22WIZMAN_PLUG_IN_MANAGER24wizman_sequence_wm_pagesERKSsbS1_ + 0x57b)
+	0x7fbf1105ed8a: mega_wizmancmd_sh + 0xadd8a (_ZN22WIZMAN_PLUG_IN_MANAGER22invoke_plug_in_managerENS_16ENTRY_POINT_TYPEESsSsbbbbbSsbSsbbSsSsbSsbjSsSsSsSsbb + 0x1fd0)
+	0x7fbf110637bc: mega_wizmancmd_sh + 0xb27bc (_Z38wizman_launch_wizard_from_command_lineiPcS_bbbbbSsbbbS_bjS_S_S_S_bb + 0x70c)
+	   0x403676: qmegawiz + 0x3676 (_ZN11CMegawizApp14start_instanceEiPPc + 0x5fc)
+	   0x403aa6: qmegawiz + 0x3aa6 (main + 0x1be)
+	0x7fbed5ec5ec5: c.so.6 + 0x21ec5 (__libc_start_main + 0xf5)
+	   0x402a49: qmegawiz + 0x2a49
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Tue Aug  9 18:44:30 2016
+</date>
+<version>Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition</version>
+</internal_error>

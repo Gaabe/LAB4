@@ -1,0 +1,4 @@
+vlib altera_mf_ver
+vmap altera_mf_ver altera_mf_ver
+vlog -work altera_mf_ver C:/altera_lite/16.0/quartus/eda/sim_lib/altera_mf.v
+vsim -L altera_mf_ver work.symbol_top_inst

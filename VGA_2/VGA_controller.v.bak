@@ -1,0 +1,8 @@
+module FIFO_reader(data_R, data_G, data_B, red, green, blue, empty, rd_en);
+
+input empty;
+input [7:0] data_R, data_G, data_B;
+output [7:0] blue, green, red;
+output rd_en;
+
+endmodule
