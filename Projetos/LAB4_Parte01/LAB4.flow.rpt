@@ -1,0 +1,143 @@
+Flow report for LAB4
+Thu Sep  1 20:07:20 2016
+Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Thu Sep  1 20:07:20 2016       ;
+; Quartus Prime Version              ; 16.0.1 Build 218 06/01/2016 SJ Lite Edition ;
+; Revision Name                      ; LAB4                                        ;
+; Top-level Entity Name              ; LAB4                                        ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 856 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 819 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 332 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 332                                         ;
+; Total pins                         ; 149 / 529 ( 28 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,536 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 09/01/2016 20:06:25 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; LAB4                ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                      ;
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                                                            ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 163683367058604.147277118524115                                                                                  ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                      ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                                        ; <None>        ; --          ; --             ;
+; ENABLE_SIGNALTAP                    ; Off                                                                                                              ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                               ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/svn/DE2_115_GOLDEN_TOP/DE2_115_GOLDEN_TOP.dpf                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/Projects/DE2C4/trunk/test/DE2_115_GOLDEN_TOP/DE2_115_GOLDEN_TOP.dpf                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/Document/de2c4/DE2_115_GOLDEN_TOP/DE2_115_GOLDEN_TOP.dpf                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/SVN/DE2_115/trunk/test/de2_115_golden_top/DE2_115_GOLDEN_TOP.dpf                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; \\wuhan-file1\R3\RD\cd_rom\DE2_115_v1.0.5_CDROM\DE2_115_demonstrations\DE2_115_golden_top\DE2_115_GOLDEN_TOP.dpf ; --            ; --          ; --             ;
+; MISC_FILE                           ; C:/Users/Administrator/Desktop/USB/de2_115_qsys/de2_115_qsys/DE2_115_golden_top/DE2_115_GOLDEN_TOP.dpf           ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_133.bsf                                                                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_133.ppf                                                                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_25.bsf                                                                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_25.ppf                                                                                                       ; --            ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; 2                                                                                                                ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                                                         ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                                            ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                                           ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                              ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                            ; --            ; --          ; --             ;
+; SMART_RECOMPILE                     ; On                                                                                                               ; Off           ; --          ; --             ;
+; USE_SIGNALTAP_FILE                  ; lab4.stp                                                                                                         ; --            ; --          ; --             ;
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 1293 MB             ; 00:00:25                           ;
+; Fitter                    ; 00:00:12     ; 1.0                     ; 1669 MB             ; 00:00:14                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 1114 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 1229 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 1367 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:45                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++---------------------------+------------------+----------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++---------------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis      ; LSD04            ; Ubuntu 14.04.5 ; 14         ; x86_64         ;
+; Fitter                    ; LSD04            ; Ubuntu 14.04.5 ; 14         ; x86_64         ;
+; Assembler                 ; LSD04            ; Ubuntu 14.04.5 ; 14         ; x86_64         ;
+; TimeQuest Timing Analyzer ; LSD04            ; Ubuntu 14.04.5 ; 14         ; x86_64         ;
+; EDA Netlist Writer        ; LSD04            ; Ubuntu 14.04.5 ; 14         ; x86_64         ;
++---------------------------+------------------+----------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off LAB4 -c LAB4
+quartus_fit --read_settings_files=off --write_settings_files=off LAB4 -c LAB4
+quartus_asm --read_settings_files=off --write_settings_files=off LAB4 -c LAB4
+quartus_sta LAB4 -c LAB4
+quartus_eda --read_settings_files=off --write_settings_files=off LAB4 -c LAB4
+
+
+

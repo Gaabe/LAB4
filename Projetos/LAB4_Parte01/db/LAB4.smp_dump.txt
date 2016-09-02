@@ -1,0 +1,54 @@
+
+State Machine - |LAB4|image_controller:inst3|state
+Name state.Writing state.WaitingFIFO state.WaitToRead state.StartingMemory state.ResetingMemory state.NewVGALine state.NewAddrLine state.ItsOver state.ALittleWait state.AtTheBegging 
+state.AtTheBegging 0 0 0 0 0 0 0 0 0 0 
+state.ALittleWait 0 0 0 0 0 0 0 0 1 1 
+state.ItsOver 0 0 0 0 0 0 0 1 0 1 
+state.NewAddrLine 0 0 0 0 0 0 1 0 0 1 
+state.NewVGALine 0 0 0 0 0 1 0 0 0 1 
+state.ResetingMemory 0 0 0 0 1 0 0 0 0 1 
+state.StartingMemory 0 0 0 1 0 0 0 0 0 1 
+state.WaitToRead 0 0 1 0 0 0 0 0 0 1 
+state.WaitingFIFO 0 1 0 0 0 0 0 0 0 1 
+state.Writing 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |LAB4|sdram:inst4|state
+Name state.NOPTIME6 state.RandomAcess2 state.Writing_PRE state.Starting_FL state.Reseting_FL state.RefreshWrite state.Refresh state.RandomAcess state.REFTIME2 state.REFTIME1 state.REFTIME0 state.PRECHARGIN state.NOPTIME5 state.NOPTIME4 state.NOPTIME3 state.NOPTIME2 state.LoadMODE state.InicializandoREF state.InicializandoPRE state.InicializandoNOP state.IDLE state.ForeverWaiting state.ActivatingR state.Activating state.Desligado 
+state.Desligado 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.Activating 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ActivatingR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ForeverWaiting 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.InicializandoNOP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.InicializandoPRE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.InicializandoREF 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.LoadMODE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.NOPTIME2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.NOPTIME3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.NOPTIME4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.NOPTIME5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.PRECHARGIN 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.REFTIME0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.REFTIME1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.REFTIME2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RandomAcess 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.Refresh 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RefreshWrite 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.Reseting_FL 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.Starting_FL 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.Writing_PRE 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RandomAcess2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.NOPTIME6 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |LAB4|fl_controller:inst2|state
+Name state.Stabilizing state.Sending state.Reseting state.Reading2 state.Reading1 state.Reading0 state.Pre_Read state.Getting_ready state.Addressing state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.Addressing 0 0 0 0 0 0 0 0 1 1 
+state.Getting_ready 0 0 0 0 0 0 0 1 0 1 
+state.Pre_Read 0 0 0 0 0 0 1 0 0 1 
+state.Reading0 0 0 0 0 0 1 0 0 0 1 
+state.Reading1 0 0 0 0 1 0 0 0 0 1 
+state.Reading2 0 0 0 1 0 0 0 0 0 1 
+state.Reseting 0 0 1 0 0 0 0 0 0 1 
+state.Sending 0 1 0 0 0 0 0 0 0 1 
+state.Stabilizing 1 0 0 0 0 0 0 0 0 1 
