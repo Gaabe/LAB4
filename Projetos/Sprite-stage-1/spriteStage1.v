@@ -1,49 +1,48 @@
-module spriteStage1(v_sync, row, column, n_reset, clk, sprite_bank, address, sprite1, sprite2, sprite3, sprite4);
-input v_sync, n_reset, clk;
+module spriteStage1(start_flag, row, column, n_reset, clk_100, clk_sync, sprite_bank, address, sprite1, sprite2, sprite3, sprite4);
+input start_flag, n_reset, clk_100, clk_sync;
 input [8:0] row;
 input [9:0] column;
 input [18:0] sprite_bank;
 
-integer i;
-
 output reg [14:0] sprite1, sprite2, sprite3, sprite4;
 output reg [4:0] address;
 
-reg v_sync_active, start, cstate, nstate;
-reg [6:0] active_counter;
+reg [14:0] sprite1reg, sprite2reg, sprite3reg, sprite4reg;
+reg cstate, nstate;
 reg [1:0] sprite_counter;
 
-
-always@(posedge clk)
+always@(posedge clk_sync)
 begin
 	if(n_reset == 0)
 	begin
-		v_sync_active <= 0;
-		active_counter <= 0;
-		start <= 0;
-		address <= 0;
-		sprite_counter <= 0;
+		sprite1 <= 0;
+		sprite2 <= 0;
+		sprite3 <= 0;
+		sprite4 <= 0;
 	end
 	else
 	begin
-		if(v_sync_active == 1)
-			active_counter <= active_counter + 1;
-		if(active_counter == 124)
-		begin
-			start <= 1;
-			active_counter <= 0;
-		end
-		if(cstate == 0)
+		sprite1 <= sprite1reg;
+		sprite2 <= sprite2reg;
+		sprite3 <= sprite3reg;
+		sprite4 <= sprite4reg;
+	end
+end
+
+always@(posedge clk_100)
+begin
+	if(n_reset == 0 && clk_sync == 1)
+	begin
+		address <= 0;
+		sprite_counter <= 0;
+		cstate <= 0;
+	end
+	else
+	begin
+		if(cstate == 1)
 			address <= address + 1;
-		if(v_sync == 0)
-		begin
-			v_sync_active <= 1;
-			start <= 0;
-		end
-		else
-			v_sync_active <= 0;
 		if(((row - 15) <= sprite_bank[18:10]) && (sprite_bank[18:10] <= row) && (sprite_bank[9:0] >= (column - 15)) && (sprite_bank[9:0] <= (column + 15)) && cstate == 1)
-			sprite_counter = sprite_counter + 1;
+			sprite_counter <= sprite_counter + 1;
 		cstate <= nstate;
 	end
 end
@@ -52,7 +51,7 @@ always@(*)
 begin
 	case(cstate)
 		0: begin
-				if(start == 1)
+				if(start_flag == 1)
 					nstate = 1;
 				else
 					nstate = 0;
@@ -70,28 +69,28 @@ begin
 				begin
 					case(sprite_counter)
 						0: begin
-								sprite1[14] = 1;
-								sprite1[13:9] = (column - sprite_bank[9:0]);
-								sprite1[8:5] = (row - sprite_bank[18:10]);
-								sprite1[4:0] = address;
+								sprite1reg[14] = 1;
+								sprite1reg[13:9] = (column - sprite_bank[9:0]);
+								sprite1reg[8:5] = (row - sprite_bank[18:10]);
+								sprite1reg[4:0] = address;
 							end
 						1: begin
-								sprite2[14] = 1;
-								sprite2[13:9] = (column - sprite_bank[9:0]);
-								sprite2[8:5] = (row - sprite_bank[18:10]);
-								sprite2[4:0] = address;
+								sprite2reg[14] = 1;
+								sprite2reg[13:9] = (column - sprite_bank[9:0]);
+								sprite2reg[8:5] = (row - sprite_bank[18:10]);
+								sprite2reg[4:0] = address;
 							end
 						2: begin
-								sprite3[14] = 1;
-								sprite3[13:9] = (column - sprite_bank[9:0]);
-								sprite3[8:5] = (row - sprite_bank[18:10]);
-								sprite3[4:0] = address;
+								sprite3reg[14] = 1;
+								sprite3reg[13:9] = (column - sprite_bank[9:0]);
+								sprite3reg[8:5] = (row - sprite_bank[18:10]);
+								sprite3reg[4:0] = address;
 							end
 						3: begin
-								sprite4[14] = 1;
-								sprite4[13:9] = (column - sprite_bank[9:0]);
-								sprite4[8:5] = (row - sprite_bank[18:10]);
-								sprite4[4:0] = address;
+								sprite4reg[14] = 1;
+								sprite4reg[13:9] = (column - sprite_bank[9:0]);
+								sprite4reg[8:5] = (row - sprite_bank[18:10]);
+								sprite4reg[4:0] = address;
 							end
 					endcase
 				end
@@ -99,3 +98,4 @@ begin
 	endcase
 end
 endmodule
+
