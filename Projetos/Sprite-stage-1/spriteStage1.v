@@ -1,4 +1,4 @@
-module spriteStage1(start_flag, row, column, n_reset, clk_100, clk_sync, sprite_bank, address, sprite1, sprite2, sprite3, sprite4);
+module spriteStage1(start_flag, row, column, n_reset, clk_100, clk_sync, sprite_bank, address, r_enable, sprite1, sprite2, sprite3, sprite4);
 input start_flag, n_reset, clk_100, clk_sync;
 input [8:0] row;
 input [9:0] column;
@@ -6,6 +6,7 @@ input [18:0] sprite_bank;
 
 output reg [14:0] sprite1, sprite2, sprite3, sprite4;
 output reg [4:0] address;
+output reg r_enable;
 
 reg [14:0] sprite1reg, sprite2reg, sprite3reg, sprite4reg;
 reg cstate, nstate;
@@ -62,8 +63,13 @@ end
 
 always@(*)
 begin
+	r_enable = 0;
+	sprite1reg = 0;
+	sprite2reg = 0;
+	sprite3reg = 0;
+	sprite4reg = 0;
 	case(cstate)
-		0: ;
+		0: r_enable = 1;
 		1: begin
 				if(((row - 15) <= sprite_bank[18:10]) && (sprite_bank[18:10] <= row) && (sprite_bank[9:0] >= (column - 15)) && (sprite_bank[9:0] <= (column + 15)))
 				begin
@@ -98,4 +104,3 @@ begin
 	endcase
 end
 endmodule
-
