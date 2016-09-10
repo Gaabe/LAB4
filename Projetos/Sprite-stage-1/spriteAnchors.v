@@ -1,6 +1,6 @@
-module anchorMemory(clk, address, rwenable, datain, dataout);
+module anchorMemory(clk, address, r_enable, w_enable, datain, dataout);
 input [4:0] address;
-input rwenable, clk;
+input r_enable, clk, w_enable;
 input [18:0] datain;
 
 reg [18:0]mem[4:0];
@@ -9,9 +9,9 @@ output reg [18:0] dataout;
 
 always@(posedge clk)
 begin
-	if(rwenable == 1)
+	if(r_enable == 1)
 		dataout <= mem[address];
-	else
+	if(w_enable == 1)
 		mem[address] <= datain;
 end
 endmodule
