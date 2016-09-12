@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Sep  1 19:58:11 2016
+Quartus Prime Version : 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+Revision Name : SRAM_top
+Top-level Entity Name : SRAM_top
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 5 / 114,480 ( < 1 % )
+    Total combinational functions : 5 / 114,480 ( < 1 % )
+    Dedicated logic registers : 3 / 114,480 ( < 1 % )
+Total registers : 3
+Total pins : 48 / 529 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 256 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,8 @@
+module splitter(sprite0, sprite1, sprite2, sprite3, sp0_num, sp1_num, sp2_num, sp3_num, sp0_line, sp1_line, sp2_line, sp3_line, sp0_offset, sp1_offset, sp2_offset, sp3_offset, sp0_en, sp1_en, sp2_en, sp3_en);
+
+input [14:0] sprite0, sprite1, sprite2, sprite3;
+output [4:0] sp0_num, sp1_num, sp2_num, sp3_num;
+output [3:0] sp0_line, sp1_line, sp2_line, sp3_line;
+
+
+endmodule

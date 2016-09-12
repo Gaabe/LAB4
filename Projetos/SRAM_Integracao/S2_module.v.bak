@@ -1,0 +1,10 @@
+module S2_module(clk, clkPipeline, sprite0, sprite1, sprite2, sprite3, v0, v1, v2, v3, v0_num, v1_num, v2_num, v3_num);
+
+input clk, clkPipeline;
+input [14:0] sprite0, sprite1, sprite2, sprite3;
+output [15:0] v0, v1, v2, v3;
+output [4:0] v0_num, v1_num, v2_num, v3_num;
+
+
+
+endmodule

@@ -1,0 +1,5 @@
+module S2_interno(sp0_num, sp1_num, sp2_num, sp3_num, sp0_line, sp1_line, sp2_line, sp3_line, sp0_offset, sp1_offset, sp2_offset, sp3_offset, sp0_en, sp1_en, sp2_en, sp3_en, clkPipeline, v0_int, v1_int, v2_int, v3_int, v0num_int, v1num_int, v2num_int, v3num_int);
+
+
+
+endmodule

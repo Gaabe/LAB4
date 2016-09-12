@@ -1,0 +1,4 @@
+module fsm_prototype(sp0_num, sp1_num, sp2_num, sp3_num, valid_rd, rd_en, cs_rd, cs_wr, out_en);
+
+
+endmodule

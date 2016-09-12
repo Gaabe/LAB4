@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/SRAM {C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_top.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/SRAM {C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_control.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Ferrari/Documents/Quartus/SRAM {C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v}
+

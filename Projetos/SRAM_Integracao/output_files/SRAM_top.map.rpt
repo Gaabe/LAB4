@@ -1,0 +1,868 @@
+Analysis & Synthesis report for SRAM_top
+Fri Sep 09 17:14:21 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |S2plusS3|t5_t6:S3|state
+ 11. State Machine - |S2plusS3|S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate
+ 12. State Machine - |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller|fstate
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component|altsyncram_rfj1:auto_generated
+ 17. Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component
+ 18. Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component
+ 19. Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller
+ 20. Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset|lpm_mux:LPM_MUX_component
+ 22. Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|s2_controller:fsm
+ 23. Parameter Settings for User Entity Instance: t5_t6:S3
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_addr_decoder:dec"
+ 26. Port Connectivity Checks: "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram"
+ 27. Port Connectivity Checks: "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Sep 09 17:14:20 2016       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; SRAM_top                                    ;
+; Top-level Entity Name              ; S2plusS3                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,853                                       ;
+;     Total combinational functions  ; 868                                         ;
+;     Dedicated logic registers      ; 1,024                                       ;
+; Total registers                    ; 1024                                        ;
+; Total pins                         ; 136                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; S2plusS3           ; SRAM_top           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; ram_megafunction.v               ; yes             ; User Wizard-Generated File             ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v         ;         ;
+; sram_addr_decoder.v              ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v        ;         ;
+; SRAM_fsm_quartus.v               ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v         ;         ;
+; S2_module.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v                ;         ;
+; mux_ip.v                         ; yes             ; User Wizard-Generated File             ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v                   ;         ;
+; mux_ip4.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v                  ;         ;
+; splitter.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v                 ;         ;
+; demux_shapes.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v             ;         ;
+; SRAM_module2.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v             ;         ;
+; s2_pipeline_buffer.v             ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v       ;         ;
+; dataShifter.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v              ;         ;
+; mux_offset.v                     ; yes             ; User Wizard-Generated File             ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v               ;         ;
+; S2_interno.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v               ;         ;
+; t5_t6.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t5_t6.v                    ;         ;
+; t7.v                             ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t7.v                       ;         ;
+; S2plusS3.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v                 ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf           ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc        ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/muxlut.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; db/mux_erc.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/mux_erc.tdf             ;         ;
+; db/mux_drc.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/mux_drc.tdf             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_rfj1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/altsyncram_rfj1.tdf     ;         ;
+; f:/downloads/sprite.mif          ; yes             ; Auto-Found Memory Initialization File  ; f:/downloads/sprite.mif                                                   ;         ;
+; s2_controller.v                  ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v            ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 1,853        ;
+;                                             ;              ;
+; Total combinational functions               ; 868          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 711          ;
+;     -- 3 input functions                    ; 100          ;
+;     -- <=2 input functions                  ; 57           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 864          ;
+;     -- arithmetic mode                      ; 4            ;
+;                                             ;              ;
+; Total registers                             ; 1024         ;
+;     -- Dedicated logic registers            ; 1024         ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 136          ;
+; Total memory bits                           ; 8192         ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; clk_25~input ;
+; Maximum fan-out                             ; 871          ;
+; Total fan-out                               ; 6582         ;
+; Average fan-out                             ; 3.02         ;
++---------------------------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                   ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                              ; Entity Name        ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |S2plusS3                                          ; 868 (1)           ; 1024 (0)     ; 8192        ; 0            ; 0       ; 0         ; 136  ; 0            ; |S2plusS3                                                                                                                                        ; S2plusS3           ; work         ;
+;    |S2_module:S2|                                  ; 191 (0)           ; 158 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2                                                                                                                           ; S2_module          ; work         ;
+;       |S2_interno:async_s2|                        ; 191 (0)           ; 74 (0)       ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2                                                                                                       ; S2_interno         ; work         ;
+;          |SRAM_module:SRAM|                        ; 4 (0)             ; 3 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM                                                                                      ; SRAM_module        ; work         ;
+;             |ram_megafunction:sram|                ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram                                                                ; ram_megafunction   ; work         ;
+;                |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component                                ; altsyncram         ; work         ;
+;                   |altsyncram_rfj1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component|altsyncram_rfj1:auto_generated ; altsyncram_rfj1    ; work         ;
+;             |sram_fsm_quartus:controller|          ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller                                                          ; sram_fsm_quartus   ; work         ;
+;          |dataShifter:offsetter|                   ; 108 (108)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter                                                                                 ; dataShifter        ; work         ;
+;          |demux_shapes:demux|                      ; 33 (33)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|demux_shapes:demux                                                                                    ; demux_shapes       ; work         ;
+;          |mux_ip4:MUX_spline|                      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline                                                                                    ; mux_ip4            ; work         ;
+;             |lpm_mux:LPM_MUX_component|            ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component                                                          ; lpm_mux            ; work         ;
+;                |mux_drc:auto_generated|            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component|mux_drc:auto_generated                                   ; mux_drc            ; work         ;
+;          |mux_ip:MUX_spnum|                        ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum                                                                                      ; mux_ip             ; work         ;
+;             |lpm_mux:LPM_MUX_component|            ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component                                                            ; lpm_mux            ; work         ;
+;                |mux_erc:auto_generated|            ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component|mux_erc:auto_generated                                     ; mux_erc            ; work         ;
+;          |mux_offset:MUX_spoffset|                 ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset                                                                               ; mux_offset         ; work         ;
+;             |lpm_mux:LPM_MUX_component|            ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset|lpm_mux:LPM_MUX_component                                                     ; lpm_mux            ; work         ;
+;                |mux_erc:auto_generated|            ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset|lpm_mux:LPM_MUX_component|mux_erc:auto_generated                              ; mux_erc            ; work         ;
+;          |s2_controller:fsm|                       ; 18 (18)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_interno:async_s2|s2_controller:fsm                                                                                     ; s2_controller      ; work         ;
+;       |S2_pipeline_buffer:saida|                   ; 0 (0)             ; 84 (84)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|S2_module:S2|S2_pipeline_buffer:saida                                                                                                  ; S2_pipeline_buffer ; work         ;
+;    |t5_t6:S3|                                      ; 644 (644)         ; 866 (866)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|t5_t6:S3                                                                                                                               ; t5_t6              ; work         ;
+;    |t7:exibicao|                                   ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |S2plusS3|t7:exibicao                                                                                                                            ; t7                 ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------------+
+; Name                                                                                                                                              ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                     ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------------+
+; S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component|altsyncram_rfj1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 1024         ; 16           ; --           ; --           ; 16384 ; F:/Downloads/sprite.mif ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                  ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------+--------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                   ; IP Include File    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------+--------------------+
+; Altera ; LPM_MUX      ; 16.0    ; N/A          ; N/A          ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline                     ; mux_ip4.v          ;
+; Altera ; LPM_MUX      ; 16.0    ; N/A          ; N/A          ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum                       ; mux_ip.v           ;
+; Altera ; LPM_MUX      ; 16.0    ; N/A          ; N/A          ; |S2plusS3|S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset                ; mux_offset.v       ;
+; Altera ; RAM: 1-PORT  ; 16.0    ; N/A          ; N/A          ; |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram ; ram_megafunction.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |S2plusS3|t5_t6:S3|state                                           ;
++-------------------+------------+----------------+-------------------+--------------+
+; Name              ; state.Sync ; state.Enviando ; state.Atualizando ; state.Inicio ;
++-------------------+------------+----------------+-------------------+--------------+
+; state.Inicio      ; 0          ; 0              ; 0                 ; 0            ;
+; state.Atualizando ; 0          ; 0              ; 1                 ; 1            ;
+; state.Enviando    ; 0          ; 1              ; 0                 ; 1            ;
+; state.Sync        ; 1          ; 0              ; 0                 ; 1            ;
++-------------------+------------+----------------+-------------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |S2plusS3|S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate                                                    ;
++-------------------+-------------------+--------------+--------------+--------------+-------------------+--------------+----------------+
+; Name              ; fstate.idle_wait1 ; fstate.read2 ; fstate.read3 ; fstate.read0 ; fstate.idle_wait0 ; fstate.read1 ; fstate.startup ;
++-------------------+-------------------+--------------+--------------+--------------+-------------------+--------------+----------------+
+; fstate.startup    ; 0                 ; 0            ; 0            ; 0            ; 0                 ; 0            ; 0              ;
+; fstate.read1      ; 0                 ; 0            ; 0            ; 0            ; 0                 ; 1            ; 1              ;
+; fstate.idle_wait0 ; 0                 ; 0            ; 0            ; 0            ; 1                 ; 0            ; 1              ;
+; fstate.read0      ; 0                 ; 0            ; 0            ; 1            ; 0                 ; 0            ; 1              ;
+; fstate.read3      ; 0                 ; 0            ; 1            ; 0            ; 0                 ; 0            ; 1              ;
+; fstate.read2      ; 0                 ; 1            ; 0            ; 0            ; 0                 ; 0            ; 1              ;
+; fstate.idle_wait1 ; 1                 ; 0            ; 0            ; 0            ; 0                 ; 0            ; 1              ;
++-------------------+-------------------+--------------+--------------+--------------+-------------------+--------------+----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------+
+; State Machine - |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller|fstate ;
++----------------+-------------+----------------+----------------------------------------------------------------+
+; Name           ; fstate.IDLE ; fstate.READ_OK ; fstate.READ                                                    ;
++----------------+-------------+----------------+----------------------------------------------------------------+
+; fstate.IDLE    ; 0           ; 0              ; 0                                                              ;
+; fstate.READ    ; 1           ; 0              ; 1                                                              ;
+; fstate.READ_OK ; 1           ; 1              ; 0                                                              ;
++----------------+-------------+----------------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++----------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                          ; Reason for Removal ;
++----------------------------------------------------------------------------------------+--------------------+
+; t5_t6:S3|state~2                                                                       ; Lost fanout        ;
+; t5_t6:S3|state~3                                                                       ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~2                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~3                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~4                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~5                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~6                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~7                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate~8                            ; Lost fanout        ;
+; S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller|fstate~4 ; Lost fanout        ;
+; Total Number of Removed Registers = 10                                                 ;                    ;
++----------------------------------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1024  ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 919   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |S2plusS3|t5_t6:S3|count[0]                                                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |S2plusS3|S2_module:S2|S2_interno:async_s2|demux_shapes:demux|v0[0]              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |S2plusS3|S2_module:S2|S2_interno:async_s2|demux_shapes:demux|v1[3]              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |S2plusS3|S2_module:S2|S2_interno:async_s2|demux_shapes:demux|v2[6]              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |S2plusS3|S2_module:S2|S2_interno:async_s2|demux_shapes:demux|v3[0]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |S2plusS3|t5_t6:S3|saida                                                         ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |S2plusS3|t5_t6:S3|Mux0                                                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter|shiftedData[11] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter|shiftedData[4]  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |S2plusS3|t5_t6:S3|Selector5                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter|shiftedData[13] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter|shiftedData[2]  ;
+; 33:1               ; 24 bits   ; 528 LEs       ; 528 LEs              ; 0 LEs                  ; No         ; |S2plusS3|t5_t6:S3|red[2]                                                        ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter|shiftedData[14] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |S2plusS3|S2_module:S2|S2_interno:async_s2|dataShifter:offsetter|shiftedData[0]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component|altsyncram_rfj1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component ;
++------------------------+--------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                             ;
++------------------------+--------------+----------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                   ;
+; LPM_WIDTH              ; 5            ; Signed Integer                                                                   ;
+; LPM_SIZE               ; 4            ; Signed Integer                                                                   ;
+; LPM_WIDTHS             ; 2            ; Signed Integer                                                                   ;
+; LPM_PIPELINE           ; 0            ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; mux_erc      ; Untyped                                                                          ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                          ;
++------------------------+--------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component ;
++------------------------+--------------+------------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                               ;
++------------------------+--------------+------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                     ;
+; LPM_WIDTH              ; 4            ; Signed Integer                                                                     ;
+; LPM_SIZE               ; 4            ; Signed Integer                                                                     ;
+; LPM_WIDTHS             ; 2            ; Signed Integer                                                                     ;
+; LPM_PIPELINE           ; 0            ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; mux_drc      ; Untyped                                                                            ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                            ;
++------------------------+--------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; IDLE           ; 0     ; Signed Integer                                                                                    ;
+; READ           ; 1     ; Signed Integer                                                                                    ;
+; READ_OK        ; 2     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component ;
++------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
+; Parameter Name                     ; Value                   ; Type                                                                                  ;
++------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                       ; Untyped                                                                               ;
+; AUTO_CARRY_CHAINS                  ; ON                      ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                     ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS                ; ON                      ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                     ; IGNORE_CASCADE                                                                        ;
+; WIDTH_BYTEENA                      ; 1                       ; Untyped                                                                               ;
+; OPERATION_MODE                     ; SINGLE_PORT             ; Untyped                                                                               ;
+; WIDTH_A                            ; 16                      ; Signed Integer                                                                        ;
+; WIDTHAD_A                          ; 10                      ; Signed Integer                                                                        ;
+; NUMWORDS_A                         ; 1024                    ; Signed Integer                                                                        ;
+; OUTDATA_REG_A                      ; CLOCK0                  ; Untyped                                                                               ;
+; ADDRESS_ACLR_A                     ; NONE                    ; Untyped                                                                               ;
+; OUTDATA_ACLR_A                     ; NONE                    ; Untyped                                                                               ;
+; WRCONTROL_ACLR_A                   ; NONE                    ; Untyped                                                                               ;
+; INDATA_ACLR_A                      ; NONE                    ; Untyped                                                                               ;
+; BYTEENA_ACLR_A                     ; NONE                    ; Untyped                                                                               ;
+; WIDTH_B                            ; 1                       ; Untyped                                                                               ;
+; WIDTHAD_B                          ; 1                       ; Untyped                                                                               ;
+; NUMWORDS_B                         ; 1                       ; Untyped                                                                               ;
+; INDATA_REG_B                       ; CLOCK1                  ; Untyped                                                                               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                  ; Untyped                                                                               ;
+; RDCONTROL_REG_B                    ; CLOCK1                  ; Untyped                                                                               ;
+; ADDRESS_REG_B                      ; CLOCK1                  ; Untyped                                                                               ;
+; OUTDATA_REG_B                      ; UNREGISTERED            ; Untyped                                                                               ;
+; BYTEENA_REG_B                      ; CLOCK1                  ; Untyped                                                                               ;
+; INDATA_ACLR_B                      ; NONE                    ; Untyped                                                                               ;
+; WRCONTROL_ACLR_B                   ; NONE                    ; Untyped                                                                               ;
+; ADDRESS_ACLR_B                     ; NONE                    ; Untyped                                                                               ;
+; OUTDATA_ACLR_B                     ; NONE                    ; Untyped                                                                               ;
+; RDCONTROL_ACLR_B                   ; NONE                    ; Untyped                                                                               ;
+; BYTEENA_ACLR_B                     ; NONE                    ; Untyped                                                                               ;
+; WIDTH_BYTEENA_A                    ; 1                       ; Signed Integer                                                                        ;
+; WIDTH_BYTEENA_B                    ; 1                       ; Untyped                                                                               ;
+; RAM_BLOCK_TYPE                     ; AUTO                    ; Untyped                                                                               ;
+; BYTE_SIZE                          ; 8                       ; Untyped                                                                               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE               ; Untyped                                                                               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ    ; Untyped                                                                               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ    ; Untyped                                                                               ;
+; INIT_FILE                          ; F:/Downloads/sprite.mif ; Untyped                                                                               ;
+; INIT_FILE_LAYOUT                   ; PORT_A                  ; Untyped                                                                               ;
+; MAXIMUM_DEPTH                      ; 0                       ; Untyped                                                                               ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                  ; Untyped                                                                               ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                  ; Untyped                                                                               ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                  ; Untyped                                                                               ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                  ; Untyped                                                                               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN         ; Untyped                                                                               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN         ; Untyped                                                                               ;
+; ENABLE_ECC                         ; FALSE                   ; Untyped                                                                               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                   ; Untyped                                                                               ;
+; WIDTH_ECCSTATUS                    ; 3                       ; Untyped                                                                               ;
+; DEVICE_FAMILY                      ; Cyclone IV E            ; Untyped                                                                               ;
+; CBXI_PARAMETER                     ; altsyncram_rfj1         ; Untyped                                                                               ;
++------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset|lpm_mux:LPM_MUX_component ;
++------------------------+--------------+-----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                                    ;
++------------------------+--------------+-----------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                            ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                          ;
+; LPM_WIDTH              ; 5            ; Signed Integer                                                                          ;
+; LPM_SIZE               ; 4            ; Signed Integer                                                                          ;
+; LPM_WIDTHS             ; 2            ; Signed Integer                                                                          ;
+; LPM_PIPELINE           ; 0            ; Untyped                                                                                 ;
+; CBXI_PARAMETER         ; mux_erc      ; Untyped                                                                                 ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                                 ;
++------------------------+--------------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: S2_module:S2|S2_interno:async_s2|s2_controller:fsm ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; startup        ; 0     ; Signed Integer                                                         ;
+; read1          ; 1     ; Signed Integer                                                         ;
+; idle_wait0     ; 2     ; Signed Integer                                                         ;
+; read0          ; 3     ; Signed Integer                                                         ;
+; read3          ; 4     ; Signed Integer                                                         ;
+; read2          ; 5     ; Signed Integer                                                         ;
+; idle_wait1     ; 6     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: t5_t6:S3 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; Inicio         ; 00    ; Unsigned Binary              ;
+; Atualizando    ; 01    ; Unsigned Binary              ;
+; Enviando       ; 10    ; Unsigned Binary              ;
+; Sync           ; 11    ; Unsigned Binary              ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                                    ;
++-------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                                   ;
++-------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                                       ;
+; Entity Instance                           ; S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                             ;
+;     -- WIDTH_A                            ; 16                                                                                                      ;
+;     -- NUMWORDS_A                         ; 1024                                                                                                    ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                               ;
++-------------------------------------------+---------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_addr_decoder:dec"                                                                    ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram"                                                                                                              ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                             ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (20 bits) is wider than the input port (10 bits) it drives.  The 10 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; wren    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller" ;
++-------+-------+----------+--------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                        ;
++-------+-------+----------+--------------------------------------------------------------------------------+
+; wr_en ; Input ; Info     ; Stuck at GND                                                                   ;
++-------+-------+----------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 136                         ;
+; cycloneiii_ff         ; 1024                        ;
+;     ENA               ; 917                         ;
+;     ENA SCLR          ; 2                           ;
+;     SCLR              ; 6                           ;
+;     plain             ; 99                          ;
+; cycloneiii_lcell_comb ; 868                         ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 4                           ;
+;     normal            ; 864                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 100                         ;
+;         4 data inputs ; 711                         ;
+; cycloneiii_ram_block  ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 16.00                       ;
+; Average LUT depth     ; 9.01                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Fri Sep 09 17:14:09 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SRAM -c SRAM_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sram_top.v
+    Info (12023): Found entity 1: SRAM_top File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pelele.v
+    Info (12023): Found entity 1: pelele File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file sram_control.v
+    Info (12023): Found entity 1: sram_control File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spriter_prototype.v
+    Info (12023): Found entity 1: spriter_prototype File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/spriter_prototype.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram_megafunction.v
+    Info (12023): Found entity 1: ram_megafunction File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file sram_addr_decoder.v
+    Info (12023): Found entity 1: sram_addr_decoder File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sram_control_fsm.v
+    Info (12023): Found entity 1: sram_fsm File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_control_fsm.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file sram_led_tester.v
+    Info (12023): Found entity 1: sram_led_tester File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_led_tester.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sram_fsm_quartus.v
+    Info (12023): Found entity 1: sram_fsm_quartus File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file s2_module.v
+    Info (12023): Found entity 1: S2_module File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_prototype.v
+    Info (12023): Found entity 1: fsm_prototype File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/fsm_prototype.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_ip.v
+    Info (12023): Found entity 1: mux_ip File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file mux_ip4.v
+    Info (12023): Found entity 1: mux_ip4 File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file resetgen.v
+    Info (12023): Found entity 1: resetGenerator File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/resetGen.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file splitter.v
+    Info (12023): Found entity 1: splitter File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux_shapes.v
+    Info (12023): Found entity 1: demux_shapes File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sram_module2.v
+    Info (12023): Found entity 1: SRAM_module File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file s2_pipeline_buffer.v
+    Info (12023): Found entity 1: S2_pipeline_buffer File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datashifter.v
+    Info (12023): Found entity 1: dataShifter File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_offset.v
+    Info (12023): Found entity 1: mux_offset File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file s2_interno.v
+    Info (12023): Found entity 1: S2_interno File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file s1_module.v
+    Info (12023): Found entity 1: S1_module File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S1_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spriter_module.v
+    Info (12023): Found entity 1: spriter_module File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/spriter_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spritestage1.v
+    Info (12023): Found entity 1: spriteStage1 File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/spriteStage1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file anchormemory.v
+    Info (12023): Found entity 1: anchorMemory File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/anchorMemory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file t5_t6.v
+    Info (12023): Found entity 1: t5_t6 File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t5_t6.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file t7.v
+    Info (12023): Found entity 1: t7 File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t7.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file s2pluss3.v
+    Info (12023): Found entity 1: S2plusS3 File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v Line: 1
+Info (12127): Elaborating entity "S2plusS3" for the top level hierarchy
+Info (12128): Elaborating entity "S2_module" for hierarchy "S2_module:S2" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v Line: 24
+Info (12128): Elaborating entity "splitter" for hierarchy "S2_module:S2|splitter:wires" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v Line: 24
+Info (12128): Elaborating entity "S2_pipeline_buffer" for hierarchy "S2_module:S2|S2_pipeline_buffer:saida" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v Line: 25
+Info (12128): Elaborating entity "S2_interno" for hierarchy "S2_module:S2|S2_interno:async_s2" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v Line: 26
+Info (12128): Elaborating entity "demux_shapes" for hierarchy "S2_module:S2|S2_interno:async_s2|demux_shapes:demux" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 35
+Info (12128): Elaborating entity "mux_ip" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 37
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v Line: 73
+Info (12130): Elaborated megafunction instantiation "S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v Line: 73
+Info (12133): Instantiated megafunction "S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v Line: 73
+    Info (12134): Parameter "lpm_size" = "4"
+    Info (12134): Parameter "lpm_type" = "LPM_MUX"
+    Info (12134): Parameter "lpm_width" = "5"
+    Info (12134): Parameter "lpm_widths" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_erc.tdf
+    Info (12023): Found entity 1: mux_erc File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/mux_erc.tdf Line: 23
+Info (12128): Elaborating entity "mux_erc" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_ip:MUX_spnum|lpm_mux:LPM_MUX_component|mux_erc:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "mux_ip4" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 38
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v Line: 73
+Info (12130): Elaborated megafunction instantiation "S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v Line: 73
+Info (12133): Instantiated megafunction "S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v Line: 73
+    Info (12134): Parameter "lpm_size" = "4"
+    Info (12134): Parameter "lpm_type" = "LPM_MUX"
+    Info (12134): Parameter "lpm_width" = "4"
+    Info (12134): Parameter "lpm_widths" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_drc.tdf
+    Info (12023): Found entity 1: mux_drc File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/mux_drc.tdf Line: 23
+Info (12128): Elaborating entity "mux_drc" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_ip4:MUX_spline|lpm_mux:LPM_MUX_component|mux_drc:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "SRAM_module" for hierarchy "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 39
+Info (12128): Elaborating entity "sram_fsm_quartus" for hierarchy "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v Line: 12
+Info (12128): Elaborating entity "ram_megafunction" for hierarchy "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v Line: 13
+Info (12128): Elaborating entity "altsyncram" for hierarchy "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v Line: 89
+Info (12130): Elaborated megafunction instantiation "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v Line: 89
+Info (12133): Instantiated megafunction "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v Line: 89
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "F:/Downloads/sprite.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rfj1.tdf
+    Info (12023): Found entity 1: altsyncram_rfj1 File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/altsyncram_rfj1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_rfj1" for hierarchy "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component|altsyncram_rfj1:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "sram_addr_decoder" for hierarchy "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_addr_decoder:dec" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v Line: 14
+Info (12128): Elaborating entity "dataShifter" for hierarchy "S2_module:S2|S2_interno:async_s2|dataShifter:offsetter" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 41
+Info (12128): Elaborating entity "mux_offset" for hierarchy "S2_module:S2|S2_interno:async_s2|mux_offset:MUX_spoffset" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 42
+Warning (12125): Using design file s2_controller.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: s2_controller File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v Line: 23
+Info (12128): Elaborating entity "s2_controller" for hierarchy "S2_module:S2|S2_interno:async_s2|s2_controller:fsm" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v Line: 43
+Info (12128): Elaborating entity "t5_t6" for hierarchy "t5_t6:S3" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v Line: 27
+Info (12128): Elaborating entity "t7" for hierarchy "t7:exibicao" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v Line: 29
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|ram_megafunction:sram|altsyncram:altsyncram_component|altsyncram_rfj1:auto_generated|ALTSYNCRAM" File: C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/db/altsyncram_rfj1.tdf Line: 33
+Warning (20013): Ignored 24 assignments for entity "VGA_ftw" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity VGA_ftw -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity VGA_ftw -section_id Top was ignored
+Warning (20013): Ignored 24 assignments for entity "symbol_top_inst" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity symbol_top_inst -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity symbol_top_inst -section_id Top was ignored
+Info (144001): Generated suppressed messages file C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/output_files/SRAM_top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2022 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 112 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 1870 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 893 megabytes
+    Info: Processing ended: Fri Sep 09 17:14:21 2016
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/output_files/SRAM_top.map.smsg.
+
+

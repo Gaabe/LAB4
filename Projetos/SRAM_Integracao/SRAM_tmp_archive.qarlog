@@ -1,0 +1,55 @@
+Quartus Prime Archive log --	C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_tmp_archive.qarlog
+
+Archive:	C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_tmp_archive.qar
+Date:		Fri Sep 09 14:21:05 2016
+Quartus Prime		16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM.qpf
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_control_fsm.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_top.qsf
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_top.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/fsm_prototype.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.qip
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.qip
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.qip
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele.bsf
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele.ppf
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele.qip
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele_bb.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/pelele_syn.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.qip
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction_bb.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction_syn.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/resetGen.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.smf
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/spriter_prototype.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_control.v
+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_led_tester.v
+c:/altera_lite/16.0/quartus/bin64/assignment_defaults.qdf
+f:/downloads/sprite.mif
+	======= Total: 38 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Sep 09 14:21:06 2016
+Source archive file:	C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_tmp_archive.qar
+Archive was extracted into	C:/Users/Rafael Ferrari/Documents/Quartus/Spriter_Integracao/
+		 - successfully.

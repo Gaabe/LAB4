@@ -1,0 +1,10 @@
+module sram_led_tester(KEY, CLOCK_50, SRAM_ADDR, SRAM_DQ, SRAM_WE_N, SRAM_CE_N, SRAM_OE_N, SRAM_UB_N, SRAM_LB_N);
+
+input [3:0] KEY;
+input CLOCK_50;
+
+output [19:0] SRAM_ADDR;
+output [15:0] SRAM_DQ;
+output SRAM_WE_N, SRAM_CE_N, SRAM_OE_N, SRAM_UB_N, SRAM_LB_N;
+
+endmodule

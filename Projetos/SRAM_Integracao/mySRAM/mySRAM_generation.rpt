@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "C:\Users\Rafael Ferrari\Documents\Quartus\SRAM\mySRAM.qsys" --block-symbol-file --output-directory="C:\Users\Rafael Ferrari\Documents\Quartus\SRAM\mySRAM" --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading SRAM/mySRAM.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 15.1]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "C:\Users\Rafael Ferrari\Documents\Quartus\SRAM\mySRAM.qsys" --synthesis=VERILOG --output-directory="C:\Users\Rafael Ferrari\Documents\Quartus\SRAM\mySRAM\synthesis" --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading SRAM/mySRAM.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 15.1]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: mySRAM: Generating mySRAM "mySRAM" for QUARTUS_SYNTH
+Info: sram_0: Starting Generation of SRAM or SSRAM Controller
+Info: sram_0: "mySRAM" instantiated altera_up_avalon_sram "sram_0"
+Info: mySRAM: Done "mySRAM" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

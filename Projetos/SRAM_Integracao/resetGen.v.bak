@@ -1,0 +1,6 @@
+module resetGenerator(clkPipeline, clk, resetSig);
+
+input clkPipeline, clk;
+output resetSig;
+
+endmodule

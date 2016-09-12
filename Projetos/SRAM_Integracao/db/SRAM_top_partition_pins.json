@@ -1,0 +1,553 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "att_color",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Red[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Green[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_Blue[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[16]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_25",
+					"strict" : false
+				},
+				{
+					"name" : "n_reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk_sync",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[18]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[20]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[19]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[17]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[15]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[22]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[21]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[10]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data_color[23]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite4[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sprite1[14]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

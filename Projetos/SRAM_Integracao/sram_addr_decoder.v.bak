@@ -1,0 +1,9 @@
+module sram_addr_decoder(lineNumber, spriteNumber, address);
+
+input			[ 3: 0]	lineNumber;
+input			[ 4: 0] 	spriteNumber;
+output 		[19: 0]	address;
+
+assign address = 20'd16 * spriteNumber + lineNumber;
+
+endmodule

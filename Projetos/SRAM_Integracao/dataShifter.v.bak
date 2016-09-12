@@ -1,0 +1,7 @@
+module dataShifter(data, offset, shiftedData);
+
+input [15:0] data;
+input [4:0] offset;
+output [15:0] shiftedData;
+
+endmodule

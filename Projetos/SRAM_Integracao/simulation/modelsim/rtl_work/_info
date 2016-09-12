@@ -1,0 +1,373 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/simulation/modelsim
+vdataShifter
+Z1 !s110 1473447122
+!i10b 1
+!s100 XdGoD0S?Zlh5mFmK5^^S62
+I<Sob20ON18]PF41X2F2NG2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1473011842
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v
+L0 1
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1473447122.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/dataShifter.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM}
+ndata@shifter
+vdemux_shapes
+R1
+!i10b 1
+!s100 Dc5hYHKW[L4Pni6zjI:W61
+ImJjiEf^>6dL1HEKe22R>E2
+R2
+R0
+w1473007463
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/demux_shapes.v|
+!i113 1
+R5
+R6
+vmux_ip
+Z7 !s110 1473447121
+!i10b 1
+!s100 =aV1;AhT=`VD6TW8ldePo0
+I5T`IEzbI:_2d7H4=m=5]]1
+R2
+R0
+w1472837282
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v
+Z8 L0 40
+R3
+r1
+!s85 0
+31
+Z9 !s108 1473447121.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip.v|
+!i113 1
+R5
+R6
+vmux_ip4
+R7
+!i10b 1
+!s100 z>Jhe7Hh:^ANNS4Gn9:@`1
+Ib>mF8KeRNmH4oj6ld@SZ>2
+R2
+R0
+w1472837338
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v
+R8
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_ip4.v|
+!i113 1
+R5
+R6
+vmux_offset
+Z10 !s110 1473447123
+!i10b 1
+!s100 GRhi5XSA9A9aHmD:iQf=C0
+I7NchR_:ZfgciEdLJSWNU<2
+R2
+R0
+w1472840546
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v
+R8
+R3
+r1
+!s85 0
+31
+Z11 !s108 1473447123.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/mux_offset.v|
+!i113 1
+R5
+R6
+vram_megafunction
+Z12 !s110 1473447120
+!i10b 1
+!s100 893<:l7Z9k9Pb0RK4=53a2
+IeG]Qi^[haFM]7_RMZ17fE3
+R2
+R0
+w1473100767
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v
+R8
+R3
+r1
+!s85 0
+31
+Z13 !s108 1473447120.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/ram_megafunction.v|
+!i113 1
+R5
+R6
+vs2_controller
+Z14 !s110 1473447124
+!i10b 1
+!s100 eGbB;B=GiBmEggLi0l9A22
+IiK;`8ZNmG[fX49@Of?9R42
+R2
+R0
+w1473107357
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v
+Z15 L0 23
+R3
+r1
+!s85 0
+31
+Z16 !s108 1473447124.000000
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_controller.v|
+!i113 1
+R5
+R6
+vS2_interno
+R10
+!i10b 1
+!s100 YlWbQb_iVnOm0FQn:hFQA0
+I;cQ=X^2Bz:DhiS8iV];SD1
+R2
+R0
+w1473107385
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_interno.v|
+!i113 1
+R5
+R6
+n@s2_interno
+vS2_module
+R12
+!i10b 1
+!s100 h9z;:]2ogIA:6PRR=0=PF0
+IV;PB80ooB0LRWfiC;iajR0
+R2
+R0
+w1473102936
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v
+L0 1
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2_module.v|
+!i113 1
+R5
+R6
+n@s2_module
+vS2_pipeline_buffer
+R1
+!i10b 1
+!s100 7YcP:8nEaT?OGbf@?OW611
+I9OCdOS7b2VoCeRRC9gK5I1
+R2
+R0
+w1472839966
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/s2_pipeline_buffer.v|
+!i113 1
+R5
+R6
+n@s2_pipeline_buffer
+vS2plusS3
+R14
+!i10b 1
+!s100 ]SfD9IbiMmVM5?CNo:bZ`1
+Ib^Y>_fDPNX7SbQ6bEHD>I0
+R2
+R0
+w1473447064
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/S2plusS3.v|
+!i113 1
+R5
+R6
+n@s2plus@s3
+vsplitter
+R7
+!i10b 1
+!s100 W5Gb<Lg9`<gj4DIFm=<h81
+I`0=UIbVZ1H<F1m`j8_84a0
+R2
+R0
+w1472842490
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/splitter.v|
+!i113 1
+R5
+R6
+vsram_addr_decoder
+R12
+!i10b 1
+!s100 HFEcRXK2XXi>;K0=6HbaH3
+ISoiW8=ca3;APk]a4f_o^e3
+R2
+R0
+w1471463644
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/sram_addr_decoder.v|
+!i113 1
+R5
+R6
+vsram_fsm_quartus
+R12
+!i10b 1
+!s100 ]UZ;o:VTEjYGaan[`Kd;A0
+I04L7EUL4cFTII7T[PWJ[h2
+R2
+R0
+w1471973694
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v
+R15
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_fsm_quartus.v|
+!i113 1
+R5
+R6
+vSRAM_module
+R1
+!i10b 1
+!s100 NEMJhN]4Ao^i[o;2NG[hd0
+ImKYK=G1P5JY6N11?HnXJH0
+R2
+R0
+w1473103688
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/SRAM_module2.v|
+!i113 1
+R5
+R6
+n@s@r@a@m_module
+vt5_t6
+R10
+!i10b 1
+!s100 4[_]QSC4V4>;4<P4^S:5N0
+InA<^Bzz=fU9f_=5_Ig9O=3
+R2
+R0
+w1473443083
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t5_t6.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t5_t6.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t5_t6.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t5_t6.v|
+!i113 1
+R5
+R6
+vt7
+R10
+!i10b 1
+!s100 9gQTNn6jloN8]FhjI2^Z32
+IlZNHe@NA?DUlVZWS7GHk33
+R2
+R0
+w1473443103
+8C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t7.v
+FC:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t7.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Rafael Ferrari/Documents/Quartus/SRAM|C:/Users/Rafael Ferrari/Documents/Quartus/SRAM/t7.v|
+!i113 1
+R5
+R6

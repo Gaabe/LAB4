@@ -1,0 +1,23 @@
+
+State Machine - |S2plusS3|t5_t6:S3|state
+Name state.Sync state.Enviando state.Atualizando state.Inicio 
+state.Inicio 0 0 0 0 
+state.Atualizando 0 0 1 1 
+state.Enviando 0 1 0 1 
+state.Sync 1 0 0 1 
+
+State Machine - |S2plusS3|S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate
+Name fstate.idle_wait1 fstate.read2 fstate.read3 fstate.read0 fstate.idle_wait0 fstate.read1 fstate.startup 
+fstate.startup 0 0 0 0 0 0 0 
+fstate.read1 0 0 0 0 0 1 1 
+fstate.idle_wait0 0 0 0 0 1 0 1 
+fstate.read0 0 0 0 1 0 0 1 
+fstate.read3 0 0 1 0 0 0 1 
+fstate.read2 0 1 0 0 0 0 1 
+fstate.idle_wait1 1 0 0 0 0 0 1 
+
+State Machine - |S2plusS3|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller|fstate
+Name fstate.IDLE fstate.READ_OK fstate.READ 
+fstate.IDLE 0 0 0 
+fstate.READ 1 0 1 
+fstate.READ_OK 1 1 0 

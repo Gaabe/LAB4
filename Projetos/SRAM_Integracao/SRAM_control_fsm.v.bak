@@ -1,0 +1,135 @@
+
+// Created by fizzim.pl version 5.10 on 2016:08:15 at 21:43:06 (www.fizzim.com)
+
+module SRAM_control_fsm (
+  output wire SRAM_CE_N,
+  output wire SRAM_LB_N,
+  output wire SRAM_OE_N,
+  output wire SRAM_UB_N,
+  output wire SRAM_WE_N,
+  output wire readdatavalid,
+  output wire writedatavalid,
+  input wire addrChanged,
+  input wire clk,
+  input wire rd_en,
+  input wire reset,
+  input wire wr_en 
+);
+
+  // state bits
+  parameter 
+  IDLE      = 7'b0011111, // writedatavalid=0 readdatavalid=0 SRAM_WE_N=1 SRAM_UB_N=1 SRAM_OE_N=1 SRAM_LB_N=1 SRAM_CE_N=1 
+  READ      = 7'b0010000, // writedatavalid=0 readdatavalid=0 SRAM_WE_N=1 SRAM_UB_N=0 SRAM_OE_N=0 SRAM_LB_N=0 SRAM_CE_N=0 
+  READ_RDY  = 7'b0110000, // writedatavalid=0 readdatavalid=1 SRAM_WE_N=1 SRAM_UB_N=0 SRAM_OE_N=0 SRAM_LB_N=0 SRAM_CE_N=0 
+  WRITE     = 7'b0000100, // writedatavalid=0 readdatavalid=0 SRAM_WE_N=0 SRAM_UB_N=0 SRAM_OE_N=1 SRAM_LB_N=0 SRAM_CE_N=0 
+  WRITE_RDY = 7'b1000100; // writedatavalid=1 readdatavalid=0 SRAM_WE_N=0 SRAM_UB_N=0 SRAM_OE_N=1 SRAM_LB_N=0 SRAM_CE_N=0 
+
+  reg [6:0] state;
+  reg [6:0] nextstate;
+
+  // comb always block
+  always @* begin
+    // Warning I2: Neither implied_loopback nor default_state_is_x attribute is set on state machine - defaulting to implied_loopback to avoid latches being inferred 
+    nextstate = state; // default to hold value because implied_loopback is set
+    case (state)
+      IDLE     : begin
+        // Warning P3: State IDLE has multiple exit transitions, and transition trans1 has no defined priority 
+        // Warning P3: State IDLE has multiple exit transitions, and transition trans2 has no defined priority 
+        // Warning P3: State IDLE has multiple exit transitions, and transition trans8 has no defined priority 
+        if (rd_en && ~wr_en) begin
+          nextstate = READ;
+        end
+        else if (wr_en) begin
+          nextstate = WRITE;
+        end
+        else if (~rd_en && ~wr_en) begin
+          nextstate = IDLE;
+        end
+      end
+      READ     : begin
+        // Warning P3: State READ has multiple exit transitions, and transition trans3 has no defined priority 
+        // Warning P3: State READ has multiple exit transitions, and transition trans4 has no defined priority 
+        if (~counterRD) begin
+          nextstate = READ;
+        end
+        else if (counterRD) begin
+          nextstate = READ_RDY;
+        end
+      end
+      READ_RDY : begin
+        // Warning P3: State READ_RDY has multiple exit transitions, and transition trans5 has no defined priority 
+        // Warning P3: State READ_RDY has multiple exit transitions, and transition trans6 has no defined priority 
+        // Warning P3: State READ_RDY has multiple exit transitions, and transition trans7 has no defined priority 
+        if (~addrChanged && rd_en) begin
+          nextstate = READ_RDY;
+        end
+        else if (addrChanged && rd_en) begin
+          nextstate = READ;
+        end
+        else if (~rd_en) begin
+          nextstate = IDLE;
+        end
+      end
+      WRITE    : begin
+        // Warning P3: State WRITE has multiple exit transitions, and transition trans10 has no defined priority 
+        // Warning P3: State WRITE has multiple exit transitions, and transition trans9 has no defined priority 
+        if (counterWR) begin
+          nextstate = WRITE_RDY;
+        end
+        else if (~counterWR) begin
+          nextstate = WRITE;
+        end
+      end
+      WRITE_RDY: begin
+        // Warning P3: State WRITE_RDY has multiple exit transitions, and transition trans11 has no defined priority 
+        // Warning P3: State WRITE_RDY has multiple exit transitions, and transition trans12 has no defined priority 
+        if (~wr_en) begin
+          nextstate = IDLE;
+        end
+        else if (wr_en) begin
+          nextstate = WRITE;
+        end
+      end
+    endcase
+  end
+
+  // Assign reg'd outputs to state bits
+  assign SRAM_CE_N = state[0];
+  assign SRAM_LB_N = state[1];
+  assign SRAM_OE_N = state[2];
+  assign SRAM_UB_N = state[3];
+  assign SRAM_WE_N = state[4];
+  assign readdatavalid = state[5];
+  assign writedatavalid = state[6];
+
+  // sequential always block
+  always @(posedge clk or negedge reset) begin
+    if (!reset)
+      state <= IDLE;
+    else
+      state <= nextstate;
+  end
+
+  // This code allows you to see state names in simulation
+  `ifndef SYNTHESIS
+  reg [71:0] statename;
+  always @* begin
+    case (state)
+      IDLE     :
+        statename = "IDLE";
+      READ     :
+        statename = "READ";
+      READ_RDY :
+        statename = "READ_RDY";
+      WRITE    :
+        statename = "WRITE";
+      WRITE_RDY:
+        statename = "WRITE_RDY";
+      default  :
+        statename = "XXXXXXXXX";
+    endcase
+  end
+  `endif
+
+endmodule
+

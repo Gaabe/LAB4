@@ -1,0 +1,7 @@
+module demux_num(data_in, v0, v1, v2, v3, sel);
+
+input [15:0] data_in;
+input [1:0] sel;
+output [15:0] v0, v1, v2, v3;
+
+endmodule

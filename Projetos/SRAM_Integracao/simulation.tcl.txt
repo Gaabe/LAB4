@@ -1,0 +1,29 @@
+vlib altera_mf_ver
+vmap altera_mf_ver altera_mf_ver
+vlog -work altera_mf_ver C:/altera_lite/16.0/quartus/eda/sim_lib/altera_mf.v
+vsim -L altera_mf_ver work.S2_module
+
+add wave -position end  sim:/S2_module/clk
+add wave -position end  sim:/S2_module/clkPipeline
+add wave -position end  sim:/S2_module/reset_n
+add wave -position end  sim:/S2_module/sprite0
+add wave -position end  sim:/S2_module/sprite1
+add wave -position end  sim:/S2_module/sprite2
+add wave -position end  sim:/S2_module/sprite3
+add wave -position end  sim:/S2_module/v0
+add wave -position end  sim:/S2_module/v1
+add wave -position end  sim:/S2_module/v2
+add wave -position end  sim:/S2_module/v3
+add wave -position end  sim:/S2_module/v0_num
+add wave -position end  sim:/S2_module/v1_num
+add wave -position end  sim:/S2_module/v2_num
+add wave -position end  sim:/S2_module/v3_num
+force -freeze sim:/S2_module/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/S2_module/clkPipeline 1 0, 0 {800 ps} -r 1600
+force -freeze sim:/S2_module/reset_n 0 0
+force -freeze sim:/S2_module/sprite0 110001000000000 0
+force -freeze sim:/S2_module/sprite1 110010000100000 0
+force -freeze sim:/S2_module/sprite2 110011001000000 0
+force -freeze sim:/S2_module/sprite3 110100001100000 0
+run
+force -freeze sim:/S2_module/reset_n 1 0
