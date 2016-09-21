@@ -1,0 +1,11 @@
+module syncReset(clk, rstIn, rstOut);
+
+input clk, rstIn;
+output reg rstOut;
+
+always @(posedge clk)
+begin
+	rstOut <= rstIn;
+end
+
+endmodule

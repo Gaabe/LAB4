@@ -1,0 +1,131 @@
+`timescale 1ns/100ps
+
+module SPITER_testbench(VGA_R, VGA_G, VGA_B);
+
+// -------------------------------------------- Variáveis -------------------------------------------- //
+
+reg clk_125, clk_25, clk_25_16, n_reset;
+
+wire [9:0] row, column;
+
+wire [7:0] FIFO_Red, FIFO_Green, FIFO_Blue;
+
+wire [23:0] data_color;
+
+output [7:0] VGA_R, VGA_G, VGA_B;
+
+wire n_reset_wire;
+
+integer f;
+
+// ---------------------------------------- Geracao de CLOCK ---------------------------------------- //
+
+initial
+begin
+	clk_125 = 1;
+	clk_25 = 1;
+	clk_25_16 = 1;
+end
+
+always
+	#4 clk_125 = !clk_125;
+
+always
+	#20 clk_25 = !clk_25;
+
+always
+	#320 clk_25_16 = !clk_25_16;
+	
+// ---------------------------------------- Geracao de Reset --------------------------------------- //
+
+initial
+begin
+	n_reset = 1'b0;
+	#680 n_reset = 1'b1;
+end
+	
+
+// ---------------------------------------- Geracao de hsync ---------------------------------------- //
+
+//initial
+//	hsync = 1'b1;
+//	
+//always
+//begin
+//	// 640 * 40 (image)
+//	#25600 hsync = 1'b1;
+//	
+//	// 16 * 40 (front porch)
+//	#640 hsync = 1'b0;
+//		
+//	// 96 * 40 (sync)
+//	#3840 hsync = 1'b1;
+//	
+//	// 48 * 40 (back porch)
+//	#1920 hsync = 1'b1;
+//end
+	
+//// ------------------------------------- Geracao de row/column ------------------------------------- //
+//
+//initial
+//begin
+//	row = 9'd0;	
+//end
+//
+//always@(posedge hsync)
+//begin
+//	if (row < 480)
+//	begin
+//		row = row + 9'd1;
+//	end
+//	else
+//	begin
+//		row = 0;
+//	end
+//end
+
+	
+// --------------------------- Instanciacao do DUT e Geradores de Sinais --------------------------- //
+
+
+syncReset regReset(.clk(clk_25_16), .rstIn(n_reset), .rstOut(n_reset_wire));
+
+spriter_module DUT(	.clk_100(clk_125), .clk_25(clk_25), .clk_sync(clk_25_16), .address(5'd0),
+							.rwenable(1'b1), .datain(19'd0), .row(row), .column(column),
+							.n_reset(n_reset_wire), .data_color(data_color), .att_color(1'b0),
+							.FIFO_Red(FIFO_Red), .FIFO_Green(FIFO_Green), .FIFO_Blue(FIFO_Blue),
+							.VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B));
+
+color_preset input_gen(.reset_n(n_reset_wire), .clock(clk_25), .data_color(data_color));
+
+VGA_module backgrounder(.clk75(clk_125), .clk25(clk_25), .clk_sync(clk_25_16), .reset(~n_reset_wire), .data_bgr(24'h010101), .wr_en(1'b1),
+								.freeslots(), .VGA_B(FIFO_Blue), .VGA_G(FIFO_Green), .VGA_R(FIFO_Red),
+								.VGA_HS(), .VGA_VS(), .VGA_SYNC_N(), .VGA_BLANK_N(), 
+								.row(row), .column(column));
+
+
+// ----------------------------------- Plotando Waveforms e Texto ---------------------------------- //
+
+initial
+begin
+	$dumpfile("spriter_module_tb.vcd");
+	$dumpvars;
+end
+
+initial
+begin
+//	f = $fopen("output.txt");
+
+//	$fwrite(f, "\t\ttime,\trow,\tcolumn,\tR,\tG,\tB\t\n");
+
+//	$fmonitor(f, "%d,\t%d,\t%d,\t%h,\t%h,\t%h\t",$time, row, column_pipeline, VGA_R, VGA_G, VGA_B);
+
+	#67200000 
+
+//	$fclose(f);
+	
+	$stop;
+end
+
+
+endmodule
