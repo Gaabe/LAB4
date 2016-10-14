@@ -1,4 +1,4 @@
-module newSpriteStage(clk, reset_n, clk_sync, start_flag, wrAddress, wenable, data_in, row_vga, column_vga, address, sprite0, sprite1, sprite2, sprite3);
+module newSpriteStage(clk, reset_n, clk_sync, start_flag, wrAddress, wenable, data_in, row_vga, column_vga, sprite0, sprite1, sprite2, sprite3, colisao);
 
 input clk, reset_n, clk_sync, start_flag, wenable;
 input [9:0] column_vga;
@@ -9,12 +9,14 @@ input [18:0] data_in;
 wire [8:0] row_link;
 wire [9:0] column_link;
 
-output reg [5:0] address;
+reg [5:0] address;
 output reg [14:0] sprite0, sprite1, sprite2, sprite3;
 
 parameter START = 3'd0, WAIT0 = 3'd1, WAIT1 = 3'd2, WAIT2 = 3'd3, WAIT3 = 3'd4, IDLE0 = 3'd5, IDLE1 = 3'd6;
 
 reg [2:0] state, next_state;
+
+reg [18:0]mem[31:0];
 
 reg sp0_en,sp1_en,sp2_en,sp3_en;
 reg [3:0] sp0_line,sp1_line,sp2_line,sp3_line;
@@ -22,7 +24,16 @@ reg [5:0] sp0_num,sp1_num,sp2_num,sp3_num;
 reg [9:0] sp0_offset,sp1_offset,sp2_offset,sp3_offset;
 reg sp0_sig, sp1_sig, sp2_sig, sp3_sig;
 
-reg [18:0]mem[31:0];
+// Colisões
+
+// 0 : Sprites 0 e 1
+// 1 : Sprites 0 e 2
+// 2 : Sprites 0 e 3
+// 3 : Sprites 1 e 2
+// 4 : Sprites 1 e 3
+// 5 : Sprites 2 e 3
+
+output reg [5:0] colisao;
 
 assign row_link = mem[address][18:10];
 assign column_link = mem[address][9:0];
@@ -35,13 +46,13 @@ begin
 		mem[0] <= 19'b0000000000000100000;
 		mem[1] <= 19'b0000000001001011000;
 		mem[2] <= 19'b0001100100000010100;
-		mem[3] <= 19'b0001100100000010111;
+		mem[3] <= 19'b0001100100111110100;
 		mem[4] <= 19'b1100100000111110100;
 		mem[5] <= 19'b1100100000111110100;
 		mem[6] <= 19'b0010100000001000001;
 		mem[7] <= 19'b0011000110101101101;
 		mem[8] <= 19'b0110001100010011001;
-		mem[9] <= 19'b0011110111001100010;
+		mem[9] <= 19'b0010110101001100010;
 		mem[10] <= 19'b1010000010111111110;
 		mem[11] <= 19'b1110000100110011010;
 		mem[12] <= 19'b1010111100100110110;
@@ -51,7 +62,7 @@ begin
 		mem[16] <= 19'b0110010000000010100;
 		mem[17] <= 19'b0000000000000000000;
 		mem[18] <= 19'b1001011000001111000;
-		mem[19] <= 19'b0000000000000000000;
+		mem[19] <= 19'b0000101000000000000;
 		mem[20] <= 19'b1100100000011011100;
 		mem[21] <= 19'b1110011000101000000;
 		mem[22] <= 19'b1010011010110100100;
@@ -71,6 +82,7 @@ begin
 			mem[wrAddress] <= data_in;
 	end
 end
+
 
 // Lógica de próximo estado
 always @ (state or clk_sync or start_flag or sp0_en or sp1_en or sp2_en or sp3_en or address)
@@ -166,7 +178,7 @@ begin
 								next_state = WAIT3;
 						end
 					end
-					
+										
 		IDLE0 : 	begin
 						if (clk_sync)
 							next_state = START;
@@ -239,7 +251,6 @@ begin
 		sp1_sig <= 0;
 		sp2_sig <= 0;
 		sp3_sig <= 0;
-	
 	end
 	else
 	begin
@@ -306,7 +317,7 @@ begin
 								sp3_offset <= column_vga - column_link;
 								sp3_sig <= 1'b1;
 							end
-						end					
+						end	
 			endcase				
 			
 		end
@@ -339,6 +350,23 @@ begin
 	sprite3[8:5] <= sp3_line;
 	sprite3[4:0] <= sp3_num[4:0];
 	
+	colisao[0] <= (mem[sp0_num][9:0] + 16 > mem[sp1_num][9:0] & mem[sp0_num][9:0] < mem[sp1_num][9:0] + 32) &
+							(mem[sp0_num][18:10] + 16 > mem[sp1_num][18:10] & mem[sp0_num][18:10] < mem[sp1_num][18:10] + 32) & sp0_en & sp1_en;
+							
+	colisao[1] <= (mem[sp0_num][9:0] + 16 > mem[sp2_num][9:0] & mem[sp0_num][9:0] < mem[sp2_num][9:0] + 32) &
+								(mem[sp0_num][18:10] + 16 > mem[sp2_num][18:10] & mem[sp0_num][18:10] < mem[sp2_num][18:10] + 32) & sp0_en & sp2_en;
+								
+	colisao[2] <= (mem[sp0_num][9:0] + 16 > mem[sp3_num][9:0] & mem[sp0_num][9:0] < mem[sp3_num][9:0] + 32) &
+								(mem[sp0_num][18:10] + 16 > mem[sp3_num][18:10] & mem[sp0_num][18:10] < mem[sp3_num][18:10] + 32) & sp0_en & sp3_en;
+								
+	colisao[3] <= (mem[sp1_num][9:0] + 16 > mem[sp2_num][9:0] & mem[sp1_num][9:0] < mem[sp2_num][9:0] + 32) &
+								(mem[sp1_num][18:10] + 16 > mem[sp2_num][18:10] & mem[sp1_num][18:10] < mem[sp2_num][18:10] + 32) & sp1_en & sp2_en;
+								
+	colisao[4] <= (mem[sp1_num][9:0] + 16 > mem[sp3_num][9:0] & mem[sp1_num][9:0] < mem[sp3_num][9:0] + 32) &
+								(mem[sp1_num][18:10] + 16 > mem[sp3_num][18:10] & mem[sp1_num][18:10] < mem[sp3_num][18:10] + 32) & sp1_en & sp3_en;
+								
+	colisao[5] <= (mem[sp2_num][9:0] + 16 > mem[sp3_num][9:0] & mem[sp2_num][9:0] < mem[sp3_num][9:0] + 32) &
+								(mem[sp2_num][18:10] + 16 > mem[sp3_num][18:10] & mem[sp2_num][18:10] < mem[sp3_num][18:10] + 32) & sp2_en & sp3_en;	
 end
 
 endmodule

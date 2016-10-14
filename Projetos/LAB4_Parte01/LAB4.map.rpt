@@ -1,6 +1,6 @@
 Analysis & Synthesis report for LAB4
-Thu Sep  1 20:06:38 2016
-Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+Fri Sep 30 11:00:57 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
 ---------------------
@@ -74,8 +74,8 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep  1 20:06:37 2016       ;
-; Quartus Prime Version              ; 16.0.1 Build 218 06/01/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 30 11:00:57 2016       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; LAB4                                        ;
 ; Top-level Entity Name              ; LAB4                                        ;
 ; Family                             ; Cyclone IV E                                ;
@@ -184,7 +184,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -196,52 +196,52 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
-; VGA_pixelLogic.v                 ; yes             ; User Verilog HDL File              ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_pixelLogic.v                   ;         ;
-; VGA_module.v                     ; yes             ; User Verilog HDL File              ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_module.v                       ;         ;
-; VGA_controller.v                 ; yes             ; User Verilog HDL File              ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_controller.v                   ;         ;
-; LAB4.bdf                         ; yes             ; User Block Diagram/Schematic File  ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/LAB4.bdf                           ;         ;
-; sdram.v                          ; yes             ; User Verilog HDL File              ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/sdram.v                            ;         ;
-; image_controller.v               ; yes             ; User Verilog HDL File              ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/image_controller.v                 ;         ;
-; fl_controller.v                  ; yes             ; User Verilog HDL File              ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/fl_controller.v                    ;         ;
-; clk_133.v                        ; yes             ; User Wizard-Generated File         ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_133.v                          ;         ;
-; clk_25.v                         ; yes             ; User Wizard-Generated File         ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_25.v                           ;         ;
-; VGA_fifoIP.v                     ; yes             ; User Wizard-Generated File         ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_fifoIP.v                       ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf          ;         ;
-; aglobal160.inc                   ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc      ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/stratix_pll.inc     ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/stratixii_pll.inc   ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/cycloneii_pll.inc   ;         ;
-; db/clk_25_altpll.v               ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/clk_25_altpll.v                 ;         ;
-; db/clk_133_altpll.v              ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/clk_133_altpll.v                ;         ;
-; dcfifo.tdf                       ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/dcfifo.tdf          ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.inc     ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc        ;         ;
-; a_graycounter.inc                ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/a_graycounter.inc   ;         ;
-; a_fefifo.inc                     ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.inc        ;         ;
-; a_gray2bin.inc                   ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/a_gray2bin.inc      ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/dffpipe.inc         ;         ;
-; alt_sync_fifo.inc                ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/alt_sync_fifo.inc   ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.inc     ;         ;
-; altsyncram_fifo.inc              ; yes             ; Megafunction                       ; /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram_fifo.inc ;         ;
-; db/dcfifo_23n1.tdf               ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf                 ;         ;
-; db/a_gray2bin_sgb.tdf            ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_gray2bin_sgb.tdf              ;         ;
-; db/a_graycounter_r57.tdf         ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_graycounter_r57.tdf           ;         ;
-; db/a_graycounter_njc.tdf         ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_graycounter_njc.tdf           ;         ;
-; db/altsyncram_gv61.tdf           ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/altsyncram_gv61.tdf             ;         ;
-; db/alt_synch_pipe_unl.tdf        ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/alt_synch_pipe_unl.tdf          ;         ;
-; db/dffpipe_fd9.tdf               ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_fd9.tdf                 ;         ;
-; db/dffpipe_8d9.tdf               ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_8d9.tdf                 ;         ;
-; db/dffpipe_ed9.tdf               ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_ed9.tdf                 ;         ;
-; db/alt_synch_pipe_vnl.tdf        ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/alt_synch_pipe_vnl.tdf          ;         ;
-; db/dffpipe_gd9.tdf               ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_gd9.tdf                 ;         ;
-; db/cmpr_d66.tdf                  ; yes             ; Auto-Generated Megafunction        ; /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/cmpr_d66.tdf                    ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; VGA_pixelLogic.v                 ; yes             ; User Verilog HDL File              ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_pixelLogic.v          ;         ;
+; VGA_module.v                     ; yes             ; User Verilog HDL File              ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_module.v              ;         ;
+; VGA_controller.v                 ; yes             ; User Verilog HDL File              ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_controller.v          ;         ;
+; LAB4.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/LAB4.bdf                  ;         ;
+; sdram.v                          ; yes             ; User Verilog HDL File              ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/sdram.v                   ;         ;
+; image_controller.v               ; yes             ; User Verilog HDL File              ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/image_controller.v        ;         ;
+; fl_controller.v                  ; yes             ; User Verilog HDL File              ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/fl_controller.v           ;         ;
+; clk_133.v                        ; yes             ; User Wizard-Generated File         ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_133.v                 ;         ;
+; clk_25.v                         ; yes             ; User Wizard-Generated File         ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_25.v                  ;         ;
+; VGA_fifoIP.v                     ; yes             ; User Wizard-Generated File         ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_fifoIP.v              ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf                                ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc                            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratix_pll.inc                           ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratixii_pll.inc                         ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/cycloneii_pll.inc                         ;         ;
+; db/clk_25_altpll.v               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/clk_25_altpll.v        ;         ;
+; db/clk_133_altpll.v              ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/clk_133_altpll.v       ;         ;
+; dcfifo.tdf                       ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/dcfifo.tdf                                ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.inc                           ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc                              ;         ;
+; a_graycounter.inc                ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/a_graycounter.inc                         ;         ;
+; a_fefifo.inc                     ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.inc                              ;         ;
+; a_gray2bin.inc                   ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/a_gray2bin.inc                            ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/dffpipe.inc                               ;         ;
+; alt_sync_fifo.inc                ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/alt_sync_fifo.inc                         ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.inc                           ;         ;
+; altsyncram_fifo.inc              ; yes             ; Megafunction                       ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram_fifo.inc                       ;         ;
+; db/dcfifo_23n1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf        ;         ;
+; db/a_gray2bin_sgb.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_gray2bin_sgb.tdf     ;         ;
+; db/a_graycounter_r57.tdf         ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_graycounter_r57.tdf  ;         ;
+; db/a_graycounter_njc.tdf         ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_graycounter_njc.tdf  ;         ;
+; db/altsyncram_gv61.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/altsyncram_gv61.tdf    ;         ;
+; db/alt_synch_pipe_unl.tdf        ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/alt_synch_pipe_unl.tdf ;         ;
+; db/dffpipe_fd9.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_fd9.tdf        ;         ;
+; db/dffpipe_8d9.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_8d9.tdf        ;         ;
+; db/dffpipe_ed9.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_ed9.tdf        ;         ;
+; db/alt_synch_pipe_vnl.tdf        ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/alt_synch_pipe_vnl.tdf ;         ;
+; db/dffpipe_gd9.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_gd9.tdf        ;         ;
+; db/cmpr_d66.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/cmpr_d66.tdf           ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -513,27 +513,27 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |LAB4|image_controller:inst3|RAM_addr[11]                 ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LAB4|VGA_module:inst1|PixelLogic:dac_interface|hcount[0] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |LAB4|sdram:inst4|support_count2[1]                       ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |LAB4|sdram:inst4|row_data[11]                            ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LAB4|VGA_module:inst1|PixelLogic:dac_interface|vcount[6] ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LAB4|sdram:inst4|column_data[2]                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|sdram:inst4|DRAM_ADDR[1]                            ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |LAB4|sdram:inst4|DRAM_ADDR[5]                            ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |LAB4|image_controller:inst3|IMG_COUNT_Y[8]               ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |LAB4|image_controller:inst3|tipo[1]                      ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |LAB4|image_controller:inst3|FREE[0]                      ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |LAB4|image_controller:inst3|IMG_COUNT_X[2]               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LAB4|VGA_module:inst1|PixelLogic:dac_interface|hcount[3] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |LAB4|sdram:inst4|support_count2[0]                       ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |LAB4|sdram:inst4|row_data[4]                             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LAB4|VGA_module:inst1|PixelLogic:dac_interface|vcount[8] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LAB4|sdram:inst4|column_data[0]                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|sdram:inst4|DRAM_ADDR[7]                            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |LAB4|sdram:inst4|DRAM_ADDR[9]                            ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |LAB4|image_controller:inst3|IMG_COUNT_Y[5]               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |LAB4|image_controller:inst3|tipo[0]                      ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |LAB4|image_controller:inst3|FREE[6]                      ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |LAB4|image_controller:inst3|IMG_COUNT_X[8]               ;
 ; 12:1               ; 4 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |LAB4|fl_controller:inst2|wait_count[3]                   ;
-; 21:1               ; 5 bits    ; 70 LEs        ; 5 LEs                ; 65 LEs                 ; Yes        ; |LAB4|image_controller:inst3|support_count[1]             ;
-; 27:1               ; 2 bits    ; 36 LEs        ; 2 LEs                ; 34 LEs                 ; Yes        ; |LAB4|sdram:inst4|support_count[1]                        ;
-; 33:1               ; 6 bits    ; 132 LEs       ; 18 LEs               ; 114 LEs                ; Yes        ; |LAB4|sdram:inst4|Refresh_count[3]                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|fl_controller:inst2|current_data[16]                ;
+; 21:1               ; 5 bits    ; 70 LEs        ; 5 LEs                ; 65 LEs                 ; Yes        ; |LAB4|image_controller:inst3|support_count[2]             ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 2 LEs                ; 34 LEs                 ; Yes        ; |LAB4|sdram:inst4|support_count[2]                        ;
+; 33:1               ; 6 bits    ; 132 LEs       ; 18 LEs               ; 114 LEs                ; Yes        ; |LAB4|sdram:inst4|Refresh_count[4]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|fl_controller:inst2|current_data[18]                ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|fl_controller:inst2|current_data[10]                ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|fl_controller:inst2|current_data[6]                 ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LAB4|fl_controller:inst2|current_data[3]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |LAB4|fl_controller:inst2|state                           ;
-; 10:1               ; 11 bits   ; 66 LEs        ; 44 LEs               ; 22 LEs                 ; No         ; |LAB4|image_controller:inst3|Selector40                   ;
-; 11:1               ; 10 bits   ; 70 LEs        ; 30 LEs               ; 40 LEs                 ; No         ; |LAB4|image_controller:inst3|Selector51                   ;
+; 10:1               ; 11 bits   ; 66 LEs        ; 44 LEs               ; 22 LEs                 ; No         ; |LAB4|image_controller:inst3|Selector30                   ;
+; 11:1               ; 10 bits   ; 70 LEs        ; 30 LEs               ; 40 LEs                 ; No         ; |LAB4|image_controller:inst3|Selector56                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -1611,7 +1611,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1620,40 +1620,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
-    Info: Processing started: Thu Sep  1 20:06:25 2016
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Fri Sep 30 11:00:44 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB4 -c LAB4
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
-Info (12021): Found 1 design units, including 1 entities, in source file VGA_pixelLogic.v
-    Info (12023): Found entity 1: PixelLogic File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_pixelLogic.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file VGA_module.v
-    Info (12023): Found entity 1: VGA_module File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_module.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file VGA_controller.v
-    Info (12023): Found entity 1: FIFO_reader File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_controller.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file LAB4.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file vga_pixellogic.v
+    Info (12023): Found entity 1: PixelLogic File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_pixelLogic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_module.v
+    Info (12023): Found entity 1: VGA_module File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.v
+    Info (12023): Found entity 1: FIFO_reader File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file lab4.bdf
     Info (12023): Found entity 1: LAB4
 Info (12021): Found 1 design units, including 1 entities, in source file sdram.v
-    Info (12023): Found entity 1: sdram File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/sdram.v Line: 4
+    Info (12023): Found entity 1: sdram File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/sdram.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file image_controller.v
-    Info (12023): Found entity 1: image_controller File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/image_controller.v Line: 4
+    Info (12023): Found entity 1: image_controller File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/image_controller.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fl_controller.v
-    Info (12023): Found entity 1: fl_controller File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/fl_controller.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file DE2_115_GOLDEN_TOP.v
-    Info (12023): Found entity 1: DE2_115_GOLDEN_TOP File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/DE2_115_GOLDEN_TOP.v Line: 46
+    Info (12023): Found entity 1: fl_controller File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/fl_controller.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file de2_115_golden_top.v
+    Info (12023): Found entity 1: DE2_115_GOLDEN_TOP File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/DE2_115_GOLDEN_TOP.v Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file clk_133.v
-    Info (12023): Found entity 1: clk_133 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_133.v Line: 40
+    Info (12023): Found entity 1: clk_133 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_133.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file clk_25.v
-    Info (12023): Found entity 1: clk_25 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_25.v Line: 40
+    Info (12023): Found entity 1: clk_25 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_25.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file teste2.bdf
     Info (12023): Found entity 1: teste2
-Info (12021): Found 1 design units, including 1 entities, in source file VGA_fifoIP.v
-    Info (12023): Found entity 1: VGA_fifoIP File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_fifoIP.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file vga_fifoip.v
+    Info (12023): Found entity 1: VGA_fifoIP File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_fifoIP.v Line: 40
 Info (12127): Elaborating entity "LAB4" for the top level hierarchy
 Info (12128): Elaborating entity "fl_controller" for hierarchy "fl_controller:inst2"
 Info (12128): Elaborating entity "clk_25" for hierarchy "clk_25:inst8"
-Info (12128): Elaborating entity "altpll" for hierarchy "clk_25:inst8|altpll:altpll_component" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_25.v Line: 91
-Info (12130): Elaborated megafunction instantiation "clk_25:inst8|altpll:altpll_component" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_25.v Line: 91
-Info (12133): Instantiated megafunction "clk_25:inst8|altpll:altpll_component" with the following parameter: File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_25.v Line: 91
+Info (12128): Elaborating entity "altpll" for hierarchy "clk_25:inst8|altpll:altpll_component" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_25.v Line: 91
+Info (12130): Elaborated megafunction instantiation "clk_25:inst8|altpll:altpll_component" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_25.v Line: 91
+Info (12133): Instantiated megafunction "clk_25:inst8|altpll:altpll_component" with the following parameter: File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_25.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1709,15 +1709,15 @@ Info (12133): Instantiated megafunction "clk_25:inst8|altpll:altpll_component" w
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/clk_25_altpll.v
-    Info (12023): Found entity 1: clk_25_altpll File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/clk_25_altpll.v Line: 30
-Info (12128): Elaborating entity "clk_25_altpll" for hierarchy "clk_25:inst8|altpll:altpll_component|clk_25_altpll:auto_generated" File: /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: clk_25_altpll File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/clk_25_altpll.v Line: 30
+Info (12128): Elaborating entity "clk_25_altpll" for hierarchy "clk_25:inst8|altpll:altpll_component|clk_25_altpll:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "sdram" for hierarchy "sdram:inst4"
 Info (12128): Elaborating entity "image_controller" for hierarchy "image_controller:inst3"
-Info (10264): Verilog HDL Case Statement information at image_controller.v(246): all case item expressions in this case statement are onehot File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/image_controller.v Line: 246
+Info (10264): Verilog HDL Case Statement information at image_controller.v(246): all case item expressions in this case statement are onehot File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/image_controller.v Line: 246
 Info (12128): Elaborating entity "clk_133" for hierarchy "clk_133:inst"
-Info (12128): Elaborating entity "altpll" for hierarchy "clk_133:inst|altpll:altpll_component" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_133.v Line: 95
-Info (12130): Elaborated megafunction instantiation "clk_133:inst|altpll:altpll_component" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_133.v Line: 95
-Info (12133): Instantiated megafunction "clk_133:inst|altpll:altpll_component" with the following parameter: File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/clk_133.v Line: 95
+Info (12128): Elaborating entity "altpll" for hierarchy "clk_133:inst|altpll:altpll_component" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_133.v Line: 95
+Info (12130): Elaborated megafunction instantiation "clk_133:inst|altpll:altpll_component" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_133.v Line: 95
+Info (12133): Instantiated megafunction "clk_133:inst|altpll:altpll_component" with the following parameter: File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/clk_133.v Line: 95
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1777,14 +1777,14 @@ Info (12133): Instantiated megafunction "clk_133:inst|altpll:altpll_component" w
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/clk_133_altpll.v
-    Info (12023): Found entity 1: clk_133_altpll File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/clk_133_altpll.v Line: 30
-Info (12128): Elaborating entity "clk_133_altpll" for hierarchy "clk_133:inst|altpll:altpll_component|clk_133_altpll:auto_generated" File: /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: clk_133_altpll File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/clk_133_altpll.v Line: 30
+Info (12128): Elaborating entity "clk_133_altpll" for hierarchy "clk_133:inst|altpll:altpll_component|clk_133_altpll:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "VGA_module" for hierarchy "VGA_module:inst1"
-Warning (10230): Verilog HDL assignment warning at VGA_module.v(39): truncated value with size 32 to match size of target (7) File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_module.v Line: 39
-Info (12128): Elaborating entity "VGA_fifoIP" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_module.v Line: 61
-Info (12128): Elaborating entity "dcfifo" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_fifoIP.v Line: 93
-Info (12130): Elaborated megafunction instantiation "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_fifoIP.v Line: 93
-Info (12133): Instantiated megafunction "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component" with the following parameter: File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_fifoIP.v Line: 93
+Warning (10230): Verilog HDL assignment warning at VGA_module.v(39): truncated value with size 32 to match size of target (7) File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_module.v Line: 39
+Info (12128): Elaborating entity "VGA_fifoIP" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_module.v Line: 61
+Info (12128): Elaborating entity "dcfifo" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_fifoIP.v Line: 93
+Info (12130): Elaborated megafunction instantiation "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_fifoIP.v Line: 93
+Info (12133): Instantiated megafunction "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component" with the following parameter: File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_fifoIP.v Line: 93
     Info (12134): Parameter "add_usedw_msb_bit" = "ON"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_numwords" = "64"
@@ -1800,47 +1800,47 @@ Info (12133): Instantiated megafunction "VGA_module:inst1|VGA_fifoIP:buffer|dcfi
     Info (12134): Parameter "write_aclr_synch" = "OFF"
     Info (12134): Parameter "wrsync_delaypipe" = "4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_23n1.tdf
-    Info (12023): Found entity 1: dcfifo_23n1 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 43
-Info (12128): Elaborating entity "dcfifo_23n1" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated" File: /home/aluno/altera_lite/16.0/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
+    Info (12023): Found entity 1: dcfifo_23n1 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 43
+Info (12128): Elaborating entity "dcfifo_23n1" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_sgb.tdf
-    Info (12023): Found entity 1: a_gray2bin_sgb File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_gray2bin_sgb.tdf Line: 23
-Info (12128): Elaborating entity "a_gray2bin_sgb" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|a_gray2bin_sgb:wrptr_g_gray2bin" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 57
+    Info (12023): Found entity 1: a_gray2bin_sgb File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_gray2bin_sgb.tdf Line: 23
+Info (12128): Elaborating entity "a_gray2bin_sgb" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|a_gray2bin_sgb:wrptr_g_gray2bin" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_r57.tdf
-    Info (12023): Found entity 1: a_graycounter_r57 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_graycounter_r57.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_r57" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|a_graycounter_r57:rdptr_g1p" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 59
+    Info (12023): Found entity 1: a_graycounter_r57 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_graycounter_r57.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_r57" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|a_graycounter_r57:rdptr_g1p" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 59
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_njc.tdf
-    Info (12023): Found entity 1: a_graycounter_njc File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_graycounter_njc.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_njc" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|a_graycounter_njc:wrptr_g1p" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 60
+    Info (12023): Found entity 1: a_graycounter_njc File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_graycounter_njc.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_njc" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|a_graycounter_njc:wrptr_g1p" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 60
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gv61.tdf
-    Info (12023): Found entity 1: altsyncram_gv61 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/altsyncram_gv61.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_gv61" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|altsyncram_gv61:fifo_ram" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 61
+    Info (12023): Found entity 1: altsyncram_gv61 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/altsyncram_gv61.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_gv61" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|altsyncram_gv61:fifo_ram" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 61
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_unl.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_unl File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/alt_synch_pipe_unl.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_unl" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_unl:rs_dgwp" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 68
+    Info (12023): Found entity 1: alt_synch_pipe_unl File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/alt_synch_pipe_unl.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_unl" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_unl:rs_dgwp" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 68
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_fd9.tdf
-    Info (12023): Found entity 1: dffpipe_fd9 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_fd9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_fd9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_unl:rs_dgwp|dffpipe_fd9:dffpipe12" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/alt_synch_pipe_unl.tdf Line: 35
+    Info (12023): Found entity 1: dffpipe_fd9 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_fd9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_fd9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_unl:rs_dgwp|dffpipe_fd9:dffpipe12" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/alt_synch_pipe_unl.tdf Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_8d9.tdf
-    Info (12023): Found entity 1: dffpipe_8d9 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_8d9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_8d9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|dffpipe_8d9:wrfull_reg" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 69
+    Info (12023): Found entity 1: dffpipe_8d9 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_8d9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_8d9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|dffpipe_8d9:wrfull_reg" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 69
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_ed9.tdf
-    Info (12023): Found entity 1: dffpipe_ed9 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_ed9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_ed9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|dffpipe_ed9:ws_brp" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 70
+    Info (12023): Found entity 1: dffpipe_ed9 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_ed9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_ed9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|dffpipe_ed9:ws_brp" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 70
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_vnl.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_vnl File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/alt_synch_pipe_vnl.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_vnl" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_vnl:ws_dgrp" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 72
+    Info (12023): Found entity 1: alt_synch_pipe_vnl File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/alt_synch_pipe_vnl.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_vnl" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_vnl:ws_dgrp" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 72
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_gd9.tdf
-    Info (12023): Found entity 1: dffpipe_gd9 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dffpipe_gd9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_gd9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_vnl:ws_dgrp|dffpipe_gd9:dffpipe17" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/alt_synch_pipe_vnl.tdf Line: 35
+    Info (12023): Found entity 1: dffpipe_gd9 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dffpipe_gd9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_gd9" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|alt_synch_pipe_vnl:ws_dgrp|dffpipe_gd9:dffpipe17" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/alt_synch_pipe_vnl.tdf Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_d66.tdf
-    Info (12023): Found entity 1: cmpr_d66 File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/cmpr_d66.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_d66" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|cmpr_d66:rdempty_eq_comp" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/dcfifo_23n1.tdf Line: 76
-Info (12128): Elaborating entity "FIFO_reader" for hierarchy "VGA_module:inst1|FIFO_reader:controller" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_module.v Line: 68
-Info (12128): Elaborating entity "PixelLogic" for hierarchy "VGA_module:inst1|PixelLogic:dac_interface" File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_module.v Line: 83
-Warning (10230): Verilog HDL assignment warning at VGA_pixelLogic.v(107): truncated value with size 32 to match size of target (8) File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_pixelLogic.v Line: 107
-Warning (10230): Verilog HDL assignment warning at VGA_pixelLogic.v(108): truncated value with size 32 to match size of target (8) File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_pixelLogic.v Line: 108
-Warning (10230): Verilog HDL assignment warning at VGA_pixelLogic.v(109): truncated value with size 32 to match size of target (8) File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/VGA_pixelLogic.v Line: 109
-Info (13000): Registers with preset signals will power-up high File: /media/aluno/RF/PARTE1_AEAEAEAEAEAEAEAEAEAEAE/db/a_graycounter_r57.tdf Line: 33
+    Info (12023): Found entity 1: cmpr_d66 File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/cmpr_d66.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_d66" for hierarchy "VGA_module:inst1|VGA_fifoIP:buffer|dcfifo:dcfifo_component|dcfifo_23n1:auto_generated|cmpr_d66:rdempty_eq_comp" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/dcfifo_23n1.tdf Line: 76
+Info (12128): Elaborating entity "FIFO_reader" for hierarchy "VGA_module:inst1|FIFO_reader:controller" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_module.v Line: 68
+Info (12128): Elaborating entity "PixelLogic" for hierarchy "VGA_module:inst1|PixelLogic:dac_interface" File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_module.v Line: 83
+Warning (10230): Verilog HDL assignment warning at VGA_pixelLogic.v(107): truncated value with size 32 to match size of target (8) File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_pixelLogic.v Line: 107
+Warning (10230): Verilog HDL assignment warning at VGA_pixelLogic.v(108): truncated value with size 32 to match size of target (8) File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_pixelLogic.v Line: 108
+Warning (10230): Verilog HDL assignment warning at VGA_pixelLogic.v(109): truncated value with size 32 to match size of target (8) File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/VGA_pixelLogic.v Line: 109
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Rafael Ferrari/Documents/GitHub/LAB4/Projetos/LAB4_Parte01/db/a_graycounter_r57.tdf Line: 33
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "FL_WE_N" is stuck at VCC
@@ -1865,9 +1865,9 @@ Info (21057): Implemented 1055 device resources after synthesis - the final reso
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 2 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 1343 megabytes
-    Info: Processing ended: Thu Sep  1 20:06:38 2016
+    Info: Peak virtual memory: 865 megabytes
+    Info: Processing ended: Fri Sep 30 11:00:57 2016
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:23
 
 

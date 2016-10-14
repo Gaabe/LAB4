@@ -27,8 +27,8 @@ agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "clk_125" (rect 0 0 29 12)(font "Arial" ))
-		(text "clk_125" (rect 21 27 50 39)(font "Arial" ))
+		(text "clk_75" (rect 0 0 25 12)(font "Arial" ))
+		(text "clk_75" (rect 21 27 46 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port

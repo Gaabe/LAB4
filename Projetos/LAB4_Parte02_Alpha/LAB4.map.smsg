@@ -1,3 +1,4 @@
 Warning (10273): Verilog HDL warning at SPRITER_t5_t6.v(54): extended using "x" or "z" File: C:/Users/Rafael Ferrari/Documents/Quartus/PARTE2_ALPHA/SPRITER_t5_t6.v Line: 54
 Warning (10268): Verilog HDL information at SPRITER_t5_t6.v(139): always construct contains both blocking and non-blocking assignments File: C:/Users/Rafael Ferrari/Documents/Quartus/PARTE2_ALPHA/SPRITER_t5_t6.v Line: 139
 Warning (10268): Verilog HDL information at SPRITER_pipelineCounter.v(28): always construct contains both blocking and non-blocking assignments File: C:/Users/Rafael Ferrari/Documents/Quartus/PARTE2_ALPHA/SPRITER_pipelineCounter.v Line: 28
+Warning (10268): Verilog HDL information at processorInterface.v(23): always construct contains both blocking and non-blocking assignments File: C:/Users/Rafael Ferrari/Documents/Quartus/PARTE2_ALPHA/processorInterface.v Line: 23

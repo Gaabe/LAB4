@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY LAB4
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:02:28 JANUARY 27,2010"
-set_global_assignment -name LAST_QUARTUS_VERSION 16.0.1
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0

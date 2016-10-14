@@ -1,30 +1,4 @@
 
-State Machine - |LAB4|S1_module:inst9|newSpriteStage:FSM|state
-Name state.IDLE1 state.IDLE0 state.WAIT3 state.WAIT2 state.WAIT1 state.WAIT0 state.START 
-state.START 0 0 0 0 0 0 0 
-state.WAIT0 0 0 0 0 0 1 1 
-state.WAIT1 0 0 0 0 1 0 1 
-state.WAIT2 0 0 0 1 0 0 1 
-state.WAIT3 0 0 1 0 0 0 1 
-state.IDLE0 0 1 0 0 0 0 1 
-state.IDLE1 1 0 0 0 0 0 1 
-
-State Machine - |LAB4|S2_module:inst12|S2_interno:async_s2|s2_controller:fsm|fstate
-Name fstate.idle_wait1 fstate.read2 fstate.read3 fstate.read0 fstate.idle_wait0 fstate.read1 fstate.startup 
-fstate.startup 0 0 0 0 0 0 0 
-fstate.read1 0 0 0 0 0 1 1 
-fstate.idle_wait0 0 0 0 0 1 0 1 
-fstate.read0 0 0 0 1 0 0 1 
-fstate.read3 0 0 1 0 0 0 1 
-fstate.read2 0 1 0 0 0 0 1 
-fstate.idle_wait1 1 0 0 0 0 0 1 
-
-State Machine - |LAB4|S2_module:inst12|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller|fstate
-Name fstate.IDLE fstate.READ_OK fstate.READ 
-fstate.IDLE 0 0 0 
-fstate.READ 1 0 1 
-fstate.READ_OK 1 1 0 
-
 State Machine - |LAB4|color_preset:inst6|fstate
 Name fstate.state20 fstate.state31 fstate.state30 fstate.state29 fstate.state28 fstate.state27 fstate.state26 fstate.state25 fstate.state24 fstate.state23 fstate.state22 fstate.state21 fstate.state19 fstate.state18 fstate.state17 fstate.state16 fstate.state15 fstate.state14 fstate.state13 fstate.state12 fstate.state11 fstate.state10 fstate.state9 fstate.state8 fstate.state7 fstate.state6 fstate.state5 fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state0 fstate.state32 
 fstate.state0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -61,12 +35,46 @@ fstate.state31 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
 fstate.state20 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
 fstate.state32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
 
-State Machine - |LAB4|t5_t6:inst13|state
+State Machine - |LAB4|interfaceTesterFSM:inst22|state
+Name state.WAIT_RDY state.ADD state.PRESET state.SETUP state.IDLE 
+state.SETUP 0 0 0 0 0 
+state.PRESET 0 0 1 1 0 
+state.IDLE 0 0 0 1 1 
+state.ADD 0 1 0 1 0 
+state.WAIT_RDY 1 0 0 1 0 
+
+State Machine - |LAB4|spriter_module:inst5|t5_t6:S3|state
 Name state.Sync state.Enviando state.Atualizando state.Inicio 
 state.Inicio 0 0 0 0 
 state.Atualizando 0 0 1 1 
 state.Enviando 0 1 0 1 
 state.Sync 1 0 0 1 
+
+State Machine - |LAB4|spriter_module:inst5|S2_module:S2|S2_interno:async_s2|s2_controller:fsm|fstate
+Name fstate.idle_wait1 fstate.read2 fstate.read3 fstate.read0 fstate.idle_wait0 fstate.read1 fstate.startup 
+fstate.startup 0 0 0 0 0 0 0 
+fstate.read1 0 0 0 0 0 1 1 
+fstate.idle_wait0 0 0 0 0 1 0 1 
+fstate.read0 0 0 0 1 0 0 1 
+fstate.read3 0 0 1 0 0 0 1 
+fstate.read2 0 1 0 0 0 0 1 
+fstate.idle_wait1 1 0 0 0 0 0 1 
+
+State Machine - |LAB4|spriter_module:inst5|S2_module:S2|S2_interno:async_s2|SRAM_module:SRAM|sram_fsm_quartus:controller|fstate
+Name fstate.IDLE fstate.READ_OK fstate.READ 
+fstate.IDLE 0 0 0 
+fstate.READ 1 0 1 
+fstate.READ_OK 1 1 0 
+
+State Machine - |LAB4|spriter_module:inst5|S1_module:S1|newSpriteStage:FSM|state
+Name state.IDLE1 state.IDLE0 state.WAIT3 state.WAIT2 state.WAIT1 state.WAIT0 state.START 
+state.START 0 0 0 0 0 0 0 
+state.WAIT0 0 0 0 0 0 1 1 
+state.WAIT1 0 0 0 0 1 0 1 
+state.WAIT2 0 0 0 1 0 0 1 
+state.WAIT3 0 0 1 0 0 0 1 
+state.IDLE0 0 1 0 0 0 0 1 
+state.IDLE1 1 0 0 0 0 0 1 
 
 State Machine - |LAB4|image_controller:inst3|state
 Name state.Writing state.WaitingFIFO state.WaitToRead state.StartingMemory state.ResetingMemory state.NewVGALine state.NewAddrLine state.ItsOver state.ALittleWait state.AtTheBegging 

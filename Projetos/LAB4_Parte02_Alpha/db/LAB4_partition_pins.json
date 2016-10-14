@@ -204,135 +204,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[9]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[8]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[7]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[6]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[5]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[4]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[3]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[2]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[1]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[0]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[19]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[18]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[17]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[16]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[15]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[14]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[13]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[12]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[11]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO12[10]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDG[1]",
 					"strict" : false
 				},
 				{
 					"name" : "LEDG[0]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[16]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[15]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[14]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[13]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[12]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[11]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[10]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[9]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[8]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[7]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[6]",
 					"strict" : false
 				},
 				{
@@ -553,10 +429,6 @@
 				},
 				{
 					"name" : "SW[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[3]",
 					"strict" : false
 				},
 				{

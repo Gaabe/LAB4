@@ -1,5 +1,5 @@
 Flow report for LAB4
-Wed Sep 21 14:54:52 2016
+Tue Oct 11 20:31:21 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Sep 21 14:54:52 2016       ;
+; Flow Status                        ; Successful - Tue Oct 11 20:31:21 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; LAB4                                        ;
 ; Top-level Entity Name              ; LAB4                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,174 / 114,480 ( 2 % )                     ;
-;     Total combinational functions  ; 1,708 / 114,480 ( 1 % )                     ;
-;     Dedicated logic registers      ; 1,149 / 114,480 ( 1 % )                     ;
-; Total registers                    ; 1149                                        ;
-; Total pins                         ; 161 / 529 ( 30 % )                          ;
+; Total logic elements               ; 2,690 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 2,260 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 1,187 / 114,480 ( 1 % )                     ;
+; Total registers                    ; 1187                                        ;
+; Total pins                         ; 130 / 529 ( 25 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 9,728 / 3,981,312 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,54 +65,48 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/21/2016 14:53:56 ;
+; Start date & time ; 10/11/2016 20:30:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LAB4                ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 10995770589187.147448043604968        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
-; ENABLE_SIGNALTAP                     ; Off                                   ; --            ; --          ; --             ;
-; FITTER_EFFORT                        ; Standard Fit                          ; Auto Fit      ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_133.bsf                           ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_133.ppf                           ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_25.bsf                            ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_25.ppf                            ; --            ; --          ; --             ;
-; MISC_FILE                            ; ram_megafunction_bb.v                 ; --            ; --          ; --             ;
-; MISC_FILE                            ; ram_megafunction_syn.v                ; --            ; --          ; --             ;
-; MISC_FILE                            ; SPRITER_mux_4_bb.v                    ; --            ; --          ; --             ;
-; MISC_FILE                            ; SPRITER_mux5_bb.v                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_125.bsf                           ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_125_bb.v                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_125.ppf                           ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_sync.bsf                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_sync_bb.v                         ; --            ; --          ; --             ;
-; MISC_FILE                            ; clk_sync.ppf                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; LAB4.dpf                              ; --            ; --          ; --             ;
-; MUX_RESTRUCTURE                      ; Off                                   ; Auto          ; --          ; --             ;
-; NUM_PARALLEL_PROCESSORS              ; 2                                     ; --            ; --          ; --             ;
-; OPTIMIZATION_MODE                    ; Aggressive Performance                ; Balanced      ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
-; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; On                                    ; Off           ; --          ; --             ;
-; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; On                                    ; Off           ; --          ; --             ;
-; PLACEMENT_EFFORT_MULTIPLIER          ; 4.0                                   ; 1.0           ; --          ; --             ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; ROUTER_TIMING_OPTIMIZATION_LEVEL     ; MAXIMUM                               ; Normal        ; --          ; --             ;
-; SMART_RECOMPILE                      ; On                                    ; Off           ; --          ; --             ;
-; USE_SIGNALTAP_FILE                   ; lab4.stp                              ; --            ; --          ; --             ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 10995770589187.147622863411456        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
+; ENABLE_SIGNALTAP                    ; Off                                   ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_133.bsf                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_133.ppf                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_25.bsf                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_25.ppf                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; ram_megafunction_bb.v                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; ram_megafunction_syn.v                ; --            ; --          ; --             ;
+; MISC_FILE                           ; SPRITER_mux_4_bb.v                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; SPRITER_mux5_bb.v                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_125.bsf                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_125_bb.v                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_125.ppf                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_sync.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_sync_bb.v                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; clk_sync.ppf                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; LAB4.dpf                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; SRAM_ancoras_bb.v                     ; --            ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; SMART_RECOMPILE                     ; On                                    ; Off           ; --          ; --             ;
+; USE_SIGNALTAP_FILE                  ; lab4.stp                              ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -120,12 +114,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 1016 MB             ; 00:00:28                           ;
-; Fitter                    ; 00:00:28     ; 1.0                     ; 1608 MB             ; 00:00:38                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 785 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 964 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 786 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:51     ; --                      ; --                  ; 00:01:14                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 916 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:00:17     ; 1.1                     ; 1876 MB             ; 00:00:22                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 792 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 998 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 795 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:42     ; --                      ; --                  ; 00:00:59                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,0 +1,31 @@
+module spriter_blackBox(clk_75, clk_25, clk_sync, address, rwenable, datain, row, column,
+								n_reset, data_color, att_color, FIFO_Red, FIFO_Green, FIFO_Blue,
+								VGA_R, VGA_G, VGA_B);
+
+input [4:0] address;
+input rwenable;
+input [18:0] datain;
+
+input n_reset, clk_75, clk_sync, clk_25;
+input [9:0] row, column;
+
+input [23:0] data_color;                    // Dado da cor vindo da mémoria
+input att_color;                            // Sinal para atualizar a memória
+
+input [7:0] FIFO_Red;
+input [7:0] FIFO_Green;
+input [7:0] FIFO_Blue;
+
+input change_rq;
+input [4:0] sp_num;
+input [18:0] ancora_in;
+
+output ready;
+	
+output [7:0] VGA_R;
+output [7:0] VGA_G;
+output [7:0] VGA_B;
+
+
+								
+endmodule

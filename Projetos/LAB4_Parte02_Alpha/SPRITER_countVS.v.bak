@@ -1,0 +1,4 @@
+module count_x_sync(clk_25, x, vsync, alert);
+
+
+endmodule

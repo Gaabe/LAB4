@@ -1,12 +1,12 @@
-module spriter_module(	clk_125, clk_25, clk_sync, address, rwenable, datain, row, column,
+module spriter_module(	clk_75, clk_25, clk_sync, address, rwenable, datain, row, column,
 								n_reset, data_color, att_color, FIFO_Red, FIFO_Green, FIFO_Blue,
-								VGA_R, VGA_G, VGA_B);
+								VGA_R, VGA_G, VGA_B, colisao);
 
 input [4:0] address;
 input rwenable;
 input [18:0] datain;
 
-input n_reset, clk_125, clk_sync, clk_25;
+input n_reset, clk_75, clk_sync, clk_25;
 input [9:0] row, column;
 
 input [23:0] data_color;                    // Dado da cor vindo da mémoria
@@ -19,6 +19,8 @@ input [7:0] FIFO_Blue;
 output [7:0] VGA_R;
 output [7:0] VGA_G;
 output [7:0] VGA_B;
+
+output [5:0] colisao;
 	
 wire [14:0] sprite0, sprite1, sprite2, sprite3;
 
@@ -28,8 +30,8 @@ wire [4:0] v0_num, v1_num, v2_num, v3_num;
 wire [7:0] red, green, blue;
 
 
-S1_module S1(.clk_125(clk_125), .clk_sync(clk_sync), .address(address), .rwenable(rwenable), .datain(datain), .clk_25(clk_25),
-				.row(row), .column(column), .n_reset(n_reset), .sprite0(sprite0), .sprite1(sprite1), .sprite2(sprite2), .sprite3(sprite3));
+S1_module S1(.clk_125(clk_75), .clk_sync(clk_sync), .address(address), .rwenable(rwenable), .datain(datain), .clk_25(clk_25),
+				.row(row), .column(column), .n_reset(n_reset), .sprite0(sprite0), .sprite1(sprite1), .sprite2(sprite2), .sprite3(sprite3), .colisao(colisao));
 				
 S2_module S2(.clk(clk_25), .reset_n(n_reset), .clkPipeline(clk_sync), .sprite0(sprite0), .sprite1(sprite1), .sprite2(sprite2), .sprite3(sprite3),
 			.v0(v0), .v1(v1), .v2(v2), .v3(v3), .v0_num(v0_num), .v1_num(v1_num), .v2_num(v2_num), .v3_num(v3_num));
